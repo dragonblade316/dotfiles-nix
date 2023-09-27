@@ -5,6 +5,8 @@
 }:
 
 {
+
+  services.xserver.displayManager.gdm.enable = true;
     # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -54,6 +56,8 @@
 
   system.stateVersion = lib.mkDefault "23.05";
 
+  nixpkgs.config.allowUnfree = true;
+
   users.users.dragonblade316 = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
@@ -61,6 +65,99 @@
     packages = with pkgs; [
     	brave 
 	kitty
+	#general
+      firefox
+      kate
+      git
+      libreoffice
+      godot
+      gparted
+      vlc
+      zoom-us
+      busybox
+      ripgrep
+      ripgrep-all
+      lazygit
+      vscode
+      obs-studio
+      xclip
+      qmk
+      gimp
+      xonotic
+      obsidian
+      vnstat
+      cura
+      (blender.override {
+        cudaSupport = true;
+      })
+      prismlauncher
+      via
+      opera
+      (lutris.override {
+        extraLibraries =  pkgs: [
+          # List library dependencies here
+        ];
+        extraPkgs = pkgs: [ pkgs.libnghttp2 ];
+      })
+      wineWowPackages.stable
+      winetricks
+
+      unrar
+      input-remapper
+
+      gh
+      go
+      grapejuice
+      audible-cli#ff4499;
+      grive2
+      wofi
+
+      eww-wayland
+
+      #davinci-resolve
+
+      #gaming
+      heroic
+
+      #terminal setup
+      neovim
+      
+      zellij
+      starship
+      neofetch
+
+      gnumake
+      gcc
+
+      home-manager
+
+      #rust/cpp
+      clang
+      rustup
+      cmake
+
+      #printer
+      #system
+      cudatoolkit
+      asusctl
+      wdisplays
+      waybar
+      swaynotificationcenter
+      mpd-small
+      pamixer
+      udiskie
+
+      playerctl
+
+      hyprpaper
+      python312
+      wireplumber
+      lxappearance
+      pavucontrol
+      imagemagick
+      grim
+      slurp
+	
     ];
     
   };

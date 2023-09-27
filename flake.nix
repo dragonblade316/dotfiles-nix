@@ -41,7 +41,7 @@
 
     in {
     	homeConfigurations = import ./home/profiles {inherit pkgs inputs system; };
-	nixosConfigurations = import ./hosts {inherit inputs system;};
+	nixosConfigurations = import ./hosts {inherit inputs system pkgs;};
 
 	packages.${system} = {
 	    inherit pkgs;
