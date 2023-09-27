@@ -14,7 +14,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-   networking.hostName = "dragonblade316"; # Define your hostname.
+  networking.hostName = "dragonblade316"; # Define your hostname.
+
+  
 
   #<nvidia>
   # Make sure opengl is enabled
@@ -68,7 +70,6 @@
     xwayland.enable = true;
     nvidiaPatches = true;
   };
-
 }
 
 

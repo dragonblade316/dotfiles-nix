@@ -9,10 +9,10 @@
       url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    flake-parts = {
-      url = "github:hercules-ci/flake-parts";
-      inputs.nixpkgs-lib.follows = "nixpkgs";
-    };
+    #flake-parts = {
+    #  url = "github:hercules-ci/flake-parts";
+    #  inputs.nixpkgs-lib.follows = "nixpkgs";
+    #};
 
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -22,16 +22,30 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      # build with your own instance of nixpkgs
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = inputs: 
-    inputs.flake-parts.lib.mkFlake {inherit inputs;} {
-      systems = ["x86_64-linux"];
+    let
+      system = "x86_64-linux";
 
-      imports = [
-        ./home/profiles
-        ./hosts
-      ];
+      pkgs = import inputs.nixpkgs {
+        inherit system;
+	config.allowUnfree = true;
+	};
+
+    in {
+    	homeConfigurations = import ./home/profiles {inherit pkgs inputs system; };
+	nixosConfigurations = import ./hosts {inherit inputs system;};
+
+	packages.${system} = {
+	    inherit pkgs;
+	};
     };
+	
 }

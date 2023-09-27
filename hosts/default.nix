@@ -1,17 +1,20 @@
 {
   inputs,
-  sharedModules,
-  homeImports,
+  system,
   ...
-}: {
-  flake.nixosConfigurations = let
-    inherit (inputs.nixpkgs.lib) nixosSystem;
-  in {
-    rog = nixosSystem {
+}:
+
+with inputs;
+let
+  inherit (nixpkgs.lib) nixosSystem;
+in {
+  rog = nixosSystem {
+      inherit system;
       modules = [
        ./rog
+       ./core.nix
+       
        #more stuff such as bluetooth and sound will go here later
-      ] ++ sharedModules;
+      ];
     };
-  };
 }

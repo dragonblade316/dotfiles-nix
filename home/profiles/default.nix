@@ -1,9 +1,17 @@
 {
   inputs,
-  withSystem,
-  module_args,
+  system,
+  pkgs,
   ...
-}: let 
+}:
+
+with inputs;
+
+let 
+
+    imports = [
+    #  hyprland.nixosModules.${system}.hm
+    ];
     sharedModules = [
       ../.
       ../shell
@@ -12,22 +20,19 @@
     ];
 
     homeImports = {
-      dragonblade316 = [./rog] ++ sharedModules;
+      dragonblade316 = [./rog] ++ sharedModules ++ imports;
     };
 
-    inherit (inputs.hm.lib) homeManagerConfiguration;
-  in {
-    imports = [
-      # we need to pass this to NixOS' HM module
-      {_module.args = {inherit homeImports;};}
-    ];
+    mkHome = {conf}: (
+	hm.lib.homeManagerConfiguration {
+		inherit pkgs;
+		modules = [conf] ++ sharedModules ++ imports;
+	}
+    );
 
-    flake = {
-      homeConfigurations = withSystem "x86_64-linux" ({pkgs, ...}: {
-        dragonblade316 = homeManagerConfiguration {
-          modules = homeImports.dragonblade316;
-          inherit pkgs;
-        };
-      });
-    };
-  }
+
+in {
+  dragonblade316 = mkHome { conf = ./rog; };
+  	
+
+}
