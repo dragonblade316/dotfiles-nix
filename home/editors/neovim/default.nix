@@ -42,6 +42,7 @@
 
       lualine-nvim
       nvim-web-devicons
+      barbar-nvim
     ];
     
 
@@ -55,14 +56,15 @@
         "lspconfig"
         "nvim-cmp"
         "treesitter"
-        "which-key"
+        "mappings"
+				"opts"
       ]);
     in ''
       ${luaConfig}
     '';
     
 
-
+#
   };
 }
 
