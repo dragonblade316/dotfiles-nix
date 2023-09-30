@@ -1,13 +1,12 @@
 {config, pkgs, ...}: {
   
-	
+	stylix = {
+		image = ./wallpapers/greninja_vs_charizard.png;
+		polarity = "dark";
+		autoEnable = true;
+	};
 
-	stylix.image = /home/dragonblade316/Pictures/wallpapers/greninja_vs_charizard.png;
-	stylix.polarity = "dark";
-	stylix.autoEnable = true;
 
-	stylix.targets.hyprland.enable = false;
-	
 
 
 	# themeing

@@ -2,24 +2,26 @@
   description = "dragonblade316's configuration files";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     
     # Home manager
     hm = {
-      url = "github:nix-community/home-manager/release-23.05";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager/";
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
 		
 		nix-colors.url = "github:misterio77/nix-colors";
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      # build with your own instance of nixpkgs
-      #inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-		stylix.url = "github:danth/stylix";
-
+		#removed bc stylix does not like it
+    # hyprland = {
+    #   url = "github:hyprwm/Hyprland";
+    #   # build with your own instance of nixpkgs
+    #   #inputs.nixpkgs.follows = "nixpkgs";
+    # };
+		stylix = {
+			url = "github:danth/stylix";
+		};
 
   };
 

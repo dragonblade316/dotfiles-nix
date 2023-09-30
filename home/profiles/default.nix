@@ -16,7 +16,7 @@ let
       ../.
       ../shell
       ../editors/neovim
-			inputs.hyprland.homeManagerModules.default
+			#inputs.hyprland.homeManagerModules.default
 			#inputs.nix-colors.homeManagerModules.default
 			inputs.stylix.homeManagerModules.stylix
     ];

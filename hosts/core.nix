@@ -158,6 +158,7 @@
       grim
       slurp
 			gnome.nautilus
+			fractal
     ];
     
   };

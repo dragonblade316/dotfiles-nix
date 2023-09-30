@@ -37,7 +37,7 @@ env = XCURSOR_SIZE,24
 exec-once = swaync
 exec-once = waybar
 exec-once = udiskie &
-exec-once = hyprpaper
+#exec-once = hyprpaper
 #</execs>
 
 
