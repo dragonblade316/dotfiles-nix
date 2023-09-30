@@ -82,43 +82,19 @@
 		};
 
 		#TODO rewrite this to take advantage of nix colors
-		# style = ''
-		# 	@define-color base00 #181818;
-		# 	@define-color base01 #2b2e37;
-		# 	@define-color base02 #3b3e47;
-		# 	@define-color base03 #585858;
-		# 	@define-color base04 ${config.colorScheme.colors.base04};
-		# 	/*
-		# 	@define-color black #000000;
-		#
-		# 	@define-color tokiocyan #00ffd2;
-		# 	@define-color tokiopink #ff4499;
-		# 	@define-color tokionavy #0a0047;
-		# 	@define-color tokioblue #0a0047;
-		# 	*/
-		# 	* {
-  #   			border-radius: 10px;
-  #   			font-family: "FiraMono Nerd Font";
-  #   			font-size: 18px;
-  #   			font-weight: 500;
-  #   			padding: 0.5;
-  #   			margin: 0;
-  #   			margin-right: 15px;
-  #   			margin-left: 15px;
-  #   			transition-delay: 3s;
-		# 	}
-		#
-		# 	#waybar {
-  # 			background-color: transparent;
-		# 	}
-		#
-		#
-		# 	#window, #clock, #tray, #network, #cpu, #memory, #wireplumber, #mpris, #battery {
-  # 			color: base04;
-  # 			background-color: #0a0047;;
-		# 	}
-		#
-		# '';
-
+		style = ''
+		 	* {
+     			border-radius: 10px;
+     			font-family: "FiraMono Nerd Font";
+     			font-size: 18px;
+     			font-weight: 500;
+     			padding: 0.5;
+     			margin: 0;
+     			margin-right: 15px;
+     			margin-left: 15px;
+     			transition-delay: 3s;
+		 	}
+		'';
+		
 	};
 }
