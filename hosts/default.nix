@@ -14,8 +14,6 @@ in {
       modules = [
        ./rog
        ./core.nix
-       
-       #more stuff such as bluetooth and sound will go here later
       ];
     };
 }

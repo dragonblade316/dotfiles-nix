@@ -34,7 +34,10 @@ env = XCURSOR_SIZE,24
 
 
 #<execs>
-source=~/.config/hypr/exec.conf
+exec-once = swaync
+exec-once = waybar
+exec-once = udiskie &
+exec-once = hyprpaper
 #</execs>
 
 
@@ -71,10 +74,10 @@ decoration {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
     rounding = 10
-    blur = yes
-    blur_size = 3
-    blur_passes = 1
-    blur_new_optimizations = on
+    #blur = yes
+    #blur_size = 3
+    #blur_passes = 1
+    #blur_new_optimizations = on
 
     drop_shadow = yes
     shadow_range = 4
@@ -135,7 +138,7 @@ $mainMod = SUPER
 bind = $mainMod, Q, exec, kitty
 bind = $mainMod, C, killactive,
 bind = $mainMod, M, exit,
-bind = $mainMod, E, exec, dolphin
+bind = $mainMod, E, exec, nautilus
 bind = $mainMod, V, togglefloating,
 bind = $mainMod, R, exec, wofi --show drun
 bind = $mainMod, P, pseudo, # dwindle

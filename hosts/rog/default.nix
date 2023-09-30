@@ -16,7 +16,10 @@
 
   networking.hostName = "dragonblade316"; # Define your hostname.
 
-  
+  services.xserver.enable = true;    
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.defaultSession = "hyprland";
+
 
   #<nvidia>
   # Make sure opengl is enabled

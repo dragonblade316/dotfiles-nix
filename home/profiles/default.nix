@@ -16,19 +16,22 @@ let
       ../.
       ../shell
       ../editors/neovim
-      
+			inputs.hyprland.homeManagerModules.default
+			#inputs.nix-colors.homeManagerModules.default
+			inputs.stylix.homeManagerModules.stylix
     ];
 
     homeImports = {
       dragonblade316 = [./rog] ++ sharedModules ++ imports;
     };
 
+		inherit (inputs.nix-colors) colors;
+
     mkHome = {conf}: (
-	hm.lib.homeManagerConfiguration {
-		inherit pkgs;
-		modules = [conf] ++ sharedModules ++ imports;
-	}
-    );
+			hm.lib.homeManagerConfiguration {
+			inherit pkgs;
+			modules = [conf] ++ sharedModules ++ imports;
+		});
 
 
 in {

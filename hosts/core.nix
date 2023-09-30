@@ -6,7 +6,9 @@
 
 {
 
-  services.xserver.displayManager.gdm.enable = true;
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
     # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -122,8 +124,6 @@
       #terminal setup
       neovim
       
-      zellij
-      starship
       neofetch
 
       gnumake
@@ -157,9 +157,11 @@
       imagemagick
       grim
       slurp
-	
+			gnome.nautilus
     ];
     
   };
+
+  services.flatpak.enable = true;
 
 }

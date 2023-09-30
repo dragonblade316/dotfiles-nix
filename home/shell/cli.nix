@@ -2,7 +2,10 @@
   home.packages = with pkgs; [
     zip
     unzip
-    #unrar
+    unrar
+
+    grim
+    slurp
 
     ripgrep
   ];

@@ -3,8 +3,7 @@
     enable = true;
     settings = {
       
-      format = "\
-        [╭╴](238)\
+      format = "[╭╴](238)\n
         $all[╰─](238)$character";
 
       character = {
@@ -20,7 +19,7 @@
         show_always = false;
       };
 
-      dirrectory = {
+      directory = {
         truncation_length = 3;
         truncation_symbol = "…/";
         home_symbol = "drago";
