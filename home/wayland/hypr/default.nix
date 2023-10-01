@@ -3,6 +3,13 @@
   wayland.windowManager.hyprland = {
 		enable = true;
 		settings = {
+
+			exec-once = [
+				"swaync"
+				"waybar" 
+				"udiskie &"
+				"hyprpaper"
+			];
 			
 			input = {
 				kb_layout = "us";
@@ -44,11 +51,13 @@
 				"SUPER, Q, exec, kitty"
 				"SUPER, C, killactive"
 				"SUPER, M, exec, swaylock"
+				"SUPERSHIFTALT, M, exit"
 				"SUPER, E, exec, nautilus"
 				"SUPER, F, togglefloating"
 				"SUPER, R, exec, wofi --show drun"
 				#need a toggle split keybind
 				"SUPER, G, togglesplit"
+				"SUPER, S, exec, grim -g $(slurp)"
 
 				
 				#vim bindings
