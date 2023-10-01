@@ -1,11 +1,20 @@
 local cmp = require('cmp')
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+
+
+--for cmp-spell
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us' }
 
 cmp.setup(
   {
     sources = {
       {name = 'nvim_lsp'},
-      {name = 'cmp-spell'},
-      {name = 'cmp-buffer'},
+			{name = 'cmp-tabnine'},
+      {name = 'spell'},
+      {name = 'buffer'},
+			{name = 'treesitter'},
+			{name = 'path'},
     },
 
     mapping = cmp.mapping.preset.insert({
@@ -24,4 +33,9 @@ cmp.setup(
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
     })
   }
+)
+
+cmp.event:on(
+	'confirm_done',
+	cmp_autopairs.on_confirm_done()
 )

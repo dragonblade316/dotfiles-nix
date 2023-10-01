@@ -2,9 +2,8 @@
   programs.starship = {
     enable = true;
     settings = {
-      
-      format = "[╭╴](238)\n
-        $all[╰─](238)$character";
+      #for some reason $all added a newline to the format but this does not
+      format = "╭╴$directory$git_status$git_branch$rust$python$c$java$kotlin$lua$battery\n╰─$character";
 
       character = {
         success_symbol = "[](bright-green)";

@@ -1,11 +1,11 @@
 {config, pkgs, ...}: 
 let
-	wallpaper = ./wallpapers/greninja_vs_charizard.png;
+	wallpaper = ./wallpapers/pokemon.jpg;
 
 
 in {  
 	stylix = {
-		image = ./wallpapers/greninja_vs_charizard.png;
+		image = wallpaper;
 		polarity = "dark";
 		autoEnable = true;
 	};
@@ -23,6 +23,4 @@ in {
 			hyprpaper
 		];
 	};
-
-
 }

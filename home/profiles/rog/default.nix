@@ -6,6 +6,7 @@
       ../../wayland/hypr
 			../../wayland/waybar.nix
 			../../wayland/swaylock.nix
+			../../terminals/kitty.nix
     ];
 
     wayland.windowManager.hyprland.enableNvidiaPatches = true;

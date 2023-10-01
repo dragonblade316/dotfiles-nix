@@ -26,7 +26,9 @@
       cmp-buffer
       cmp-treesitter
       cmp-spell
+			cmp-tabnine
       lsp-zero-nvim
+			nvim-autopairs
 
       which-key-nvim
       telescope-nvim
