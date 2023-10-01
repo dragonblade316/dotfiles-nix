@@ -5,6 +5,7 @@ require("Comment").setup()
 require("telescope").setup()
 require("nvim-tree").setup()
 require("barbar").setup()
+require("nvim-autopairs").setup()
 
 
 vim.opt.spell = true
