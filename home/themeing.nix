@@ -1,6 +1,6 @@
 {config, pkgs, ...}: 
 let
-	wallpaper = ./wallpapers/pokemon.jpg;
+	wallpaper = ./wallpapers/sans.png;
 
 
 in {  
@@ -8,6 +8,7 @@ in {
 		image = wallpaper;
 		polarity = "dark";
 		autoEnable = true;
+		opacity.terminal = 0.5;
 	};
 
 	#wallpaper stuff

@@ -72,13 +72,13 @@
       kate
       git
       libreoffice
-      godot
+      #godot4
       gparted
       vlc
       zoom-us
       busybox
       ripgrep
-      ripgrep-all
+      #ripgrep-all
       lazygit
       vscode
       obs-studio
@@ -89,9 +89,9 @@
       obsidian
       vnstat
       cura
-      (blender.override {
-        cudaSupport = true;
-      })
+      #(blender.override {
+      #  cudaSupport = true;
+      #})
       prismlauncher
       via
       opera

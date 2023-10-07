@@ -36,7 +36,7 @@
 
 				"cpu" = {
 					interval = 1;
-					format = ''{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7'';
+					format = ''{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}'';
 					format-icons = [
 						''<span color='#69ff94'>▁</span>'' # green
           	''<span color='#2aa9ff'>▂</span>'' # blue

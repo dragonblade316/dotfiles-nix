@@ -5,7 +5,8 @@
 		settings = {
 
 			exec-once = [
-				"swaync"
+				"dunst"
+				#"swaync"
 				"waybar" 
 				"udiskie &"
 				"hyprpaper"
