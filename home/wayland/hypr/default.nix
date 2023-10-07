@@ -5,7 +5,7 @@
 		settings = {
 
 			exec-once = [
-				"dunst"
+				#"dunst"
 				#"swaync"
 				"waybar" 
 				"udiskie &"
@@ -58,7 +58,7 @@
 				"SUPER, R, exec, wofi --show drun"
 				#need a toggle split keybind
 				"SUPER, G, togglesplit"
-				"SUPER, S, exec, grim -g $(slurp)"
+				"SUPER, S, exec, grim -g $(slurp) -o $home/Pictures"
 
 				
 				#vim bindings

@@ -159,6 +159,7 @@
       slurp
 			gnome.nautilus
 			fractal
+			xdg-desktop-portal-hyprland
     ];
     
   };
