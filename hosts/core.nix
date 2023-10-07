@@ -4,6 +4,9 @@
   ...
 }:
 
+# This folder just has some base configuration that I think its reasonable to expect any system I use to have.
+# There are some packages in here but most are defined in ../home or in the hosts
+
 {
 
 
@@ -26,8 +29,6 @@
     #media-session.enable = true;
   };
   
-
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -65,105 +66,25 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
     packages = with pkgs; [
-    	brave 
-	kitty
-	#general
-      firefox
-      kate
       git
-      libreoffice
-      #godot4
-      gparted
-      vlc
-      zoom-us
       busybox
       ripgrep
       #ripgrep-all
-      lazygit
-      vscode
-      obs-studio
-      xclip
-      qmk
-      gimp
-      xonotic
-      obsidian
-      vnstat
-      cura
-      #(blender.override {
-      #  cudaSupport = true;
-      #})
-      prismlauncher
-      via
-      opera
-      (lutris.override {
-        extraLibraries =  pkgs: [
-          # List library dependencies here
-        ];
-        extraPkgs = pkgs: [ pkgs.libnghttp2 ];
-      })
-      wineWowPackages.stable
-      winetricks
-
-      unrar
-      input-remapper
-
-      gh
-      go
-      grapejuice
-      audible-cli#ff4499;
-      grive2
-      wofi
-
-      eww-wayland
-
-      #davinci-resolve
-
-      #gaming
-      heroic
-
-      #terminal setup
-      neovim
-      
-      neofetch
 
       gnumake
       gcc
 
       home-manager
-
-      #rust/cpp
-      clang
-      rustup
-      cmake
-
-      #printer
-      #system
-      cudatoolkit
-      asusctl
-      wdisplays
-      waybar
-      swaynotificationcenter
-      mpd-small
+      
+      cudatoolkit #move to envirment
       pamixer
       udiskie
 
       playerctl
 
-      hyprpaper
-      python312
       wireplumber
-      lxappearance
-      pavucontrol
-      imagemagick
-      grim
-      slurp
-			gnome.nautilus
-			fractal
-			xdg-desktop-portal-hyprland
+			# xdg-desktop-portal-hyprland
     ];
     
   };
-
-  services.flatpak.enable = true;
-
 }

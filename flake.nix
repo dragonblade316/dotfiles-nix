@@ -23,18 +23,22 @@
 			url = "github:danth/stylix";
 		};
 
+		blender.url = "github:edolstra/nix-warez?dir=blender";
+
   };
 
   outputs = inputs: 
     let
       system = "x86_64-linux";
 
+			overlays = [inputs.blender.overlays.default];
       pkgs = import inputs.nixpkgs {
-        inherit system;
+        inherit system overlays;
 				config.allowUnfree = true;
 			};
 
     in {
+
     	homeConfigurations = import ./home/profiles {inherit pkgs inputs system; };
 			nixosConfigurations = import ./hosts {inherit inputs system pkgs;};
 

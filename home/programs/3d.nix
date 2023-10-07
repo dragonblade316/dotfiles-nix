@@ -1,6 +1,5 @@
 {pkgs, ...}: {
-  home.packages = {
-    blender
-    cura
-  }
+  home.packages = with pkgs; [
+		blender_3_6
+	];
 }

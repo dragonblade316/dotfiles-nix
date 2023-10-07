@@ -8,5 +8,7 @@
     slurp
 
     ripgrep
+
+		imagemagick
   ];
 }

@@ -10,6 +10,11 @@
 			../../programs/mako.nix
 			# ../../editors/vscode
 			#../../editors/intellij-idea
+			../../programs/3d.nix
+			../../programs/art.nix
+			../../programs/comms.nix
+			../../programs/games.nix
+			../../programs/misc.nix
     ];
 
     wayland.windowManager.hyprland.enableNvidiaPatches = true;

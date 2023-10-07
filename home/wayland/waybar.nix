@@ -84,7 +84,7 @@
 		#TODO rewrite this to take advantage of nix colors
 		style = ''
 		 	* {
-     			border-radius: 10px;
+     			#border-radius: 10px;
      			font-family: "FiraMono Nerd Font";
      			font-size: 18px;
      			font-weight: 500;
