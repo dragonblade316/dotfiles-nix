@@ -7,7 +7,7 @@
 			../../wayland/waybar.nix
 			#../../wayland/swaylock.nix
 			../../terminals/kitty.nix
-			./../programs/dunst.nix
+			../../programs/mako.nix
 			# ../../editors/vscode
 			#../../editors/intellij-idea
     ];

@@ -9,6 +9,6 @@
     		origin = "top-right";
     		transparency = 10;
   		};
-		}
-	}
+		};
+	};
 }

@@ -9,4 +9,4 @@ end)
 
 --lspc.rust_analyzer.setup({})
 
-lsp_zero.setup_servers({'lua_ls', "rust_analyzer", 'rnix', 'kotlin_language_server'})
+lsp_zero.setup_servers({'lua_ls', "rust_analyzer", 'rnix', 'pyright', 'kotlin_language_server'})
