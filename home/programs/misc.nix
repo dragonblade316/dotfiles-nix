@@ -9,6 +9,7 @@
 		gparted
 		wdisplays
 		gnome.nautilus
+		gnome.gnome-system-monitor
 		brave
 	];
 }
