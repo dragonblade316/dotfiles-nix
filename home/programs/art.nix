@@ -1,11 +1,6 @@
 {pkgs, ...}: {
-	home.packages = with pkgs; [
+	home.packages = [
 		gimp
-		krita
 		obs-studio
-		godot_4
-		cura
-		blender_3_6
-		freecad
 	];
 }
