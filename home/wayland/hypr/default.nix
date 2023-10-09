@@ -53,7 +53,7 @@
 				"SUPERSHIFTALT, M, exit"
 				"SUPER, E, exec, nautilus"
 				"SUPER, F, togglefloating"
-				"SUPER, R, exec, wofi --show drun"
+				"SUPER, R, exec, wofi"
 				#need a toggle split keybind
 				"SUPER, G, togglesplit"
 				"SUPER, S, exec, grim -g $(slurp) -o $home/Pictures"

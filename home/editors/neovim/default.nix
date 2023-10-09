@@ -36,6 +36,7 @@
       nvim-tree-lua
       (nvim-treesitter.withPlugins (_: pkgs.tree-sitter.allGrammars))
       leap-nvim
+			flash-nvim
       comment-nvim
       {
         plugin = tokyonight-nvim;

@@ -10,5 +10,7 @@
     ripgrep
 
 		imagemagick
+
+		neofetch
   ];
 }
