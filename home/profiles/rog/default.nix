@@ -4,12 +4,13 @@
       ../../programs/misc.nix
       ../../themeing.nix
       ../../wayland/hypr
+			../../program/eww
 			../../wayland/waybar.nix
 			#../../wayland/swaylock.nix
 			../../terminals/kitty.nix
 			../../programs/mako.nix
-			# ../../editors/vscode
-			#../../editors/intellij-idea
+			../../editors/vscode
+			../../editors/intellij-idea
 			../../programs/art.nix
 			../../programs/comms.nix
 			../../programs/games.nix

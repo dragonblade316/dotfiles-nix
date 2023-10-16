@@ -1,0 +1,48 @@
+(defwidget musicplayer []
+  (box
+    :orientation "horizontal"
+    :halign "center"
+    :space-evenly "false"
+    
+
+
+    (musiclabel)
+    (musicbuttons)
+  )
+)
+
+(defwidget musiclabel []
+  (box 
+    :orientation "vertical"
+    :halign "center"
+    :space-evenly "false"
+    {musictitle}
+    {musicalbum}
+  )
+)
+
+(defwidget musicbuttons []
+  (box
+    :orientation "horizontal"
+    :halign "center"
+    (button
+      :onclick "playerctl previous"
+    )
+    (button
+      :onclick "playerctl play-pause"
+    )
+    (button
+      :onclick "playerctl next"
+    )
+  )
+)
+
+
+(deflisten musictitle :initial ""
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
+
+(deflisten musicalbum :initial ""
+  "playerctl --follow metadata --format '{{ album }}' || true")
+
+(deflisten musicplaying :initial "stopped"
+  "playerctl --follow status")

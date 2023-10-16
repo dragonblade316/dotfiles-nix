@@ -1,0 +1,57 @@
+(include "./modules/clock.yuck")
+(include "./modules/system.yuck")
+(include "./modules/player.yuck")
+(include "./modules/volume.yuck")
+
+(defwidget rightgroup []
+  (box 
+    :orientation "horizontal"
+    :halign "end"
+    :space-evenly "false"
+    :spacing "100"
+
+    
+    (system)
+    ;(clock)
+
+  )
+)
+
+(defwidget leftgroup []
+  (box
+    :orientation "h"
+    :halign "start"
+    :space-evenly "false"
+    :spacing 20
+
+    
+    (musicplayer)
+    (volume)
+    "thinghere"
+  )
+)
+
+(defwidget bar []
+  (centerbox 
+    (leftgroup)
+    (rightgroup)
+    (rightgroup)
+  )
+)
+
+
+(defwindow bar
+  ; will need to make a script to detect weather it is connected to the dock or not
+  :monitor 2
+  :geometry (geometry 
+    :x "0%"
+    :y "0%"
+    :width "90%"
+    :height "50px"
+    :anchor "top center"
+    )
+  :reserve (struts :side "top" :distance "4%")
+  :stacking "fg"
+  (bar)
+)
+

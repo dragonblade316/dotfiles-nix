@@ -1,0 +1,40 @@
+(defwidget volume []
+  (box
+    (eventbox
+      :class "mem"
+      :onclick "pamixer --toggle-mute"
+      :onscorll "sh ../scripts/volume.sh {}"
+
+      (circular-progress
+        :class "mem"
+        :value {volume}
+        :thickness 7
+      )
+    )
+  )
+)
+
+(defpoll volume
+  :interval "0.1s"
+  "pamixer --get-volume")
+
+(defpoll mute
+  :interval "0.1s"
+  "pamixer --get-mute")
+
+
+;(eventbox
+;  :onscorll "sh ../scripts/volume.sh {}"
+;  :onclick "pamixer --toggle-mute"
+;  ;:class "mem"
+;)
+    
+;(label
+;  :text volume)
+;)
+
+;(circular-progress
+;  :class "mem"
+;  :value {volume}
+;  :thickness 6
+)

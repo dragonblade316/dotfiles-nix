@@ -1,0 +1,22 @@
+(defwidget clock []
+  (box
+    :orientation "vertical"
+    :halign "right"
+    :space-evenly ""
+
+    time
+    date
+  )
+)
+
+(defpoll time 
+  :interval "0.1s"
+  `date +%H:%M:%S`
+)
+
+(defpoll date
+  :interval "15m"
+  `date +%D`
+)
+
+
