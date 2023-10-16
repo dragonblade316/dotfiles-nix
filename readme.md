@@ -8,15 +8,7 @@ There is work needed to finish it but it will hopefully look really good when it
 - ./home : Home-Manager configurations.
 
 ### Todo:
-- MVP
-- finish neovim config
-- move many of my packages from ./hosts/core.nix to either home or a seperate optional module
-- nix colors themeing
 - adding an eww config
-- wofi config
-- hyprland config
-- wallpaper stuff
-- gtk/qt
 
 ### Repos I learned from
 https://github.com/fufexan/dotfiles/blob/main/
