@@ -1,57 +1,54 @@
-(include "./modules/clock.yuck")
-(include "./modules/system.yuck")
-(include "./modules/player.yuck")
-(include "./modules/volume.yuck")
-
-(defwidget rightgroup []
-  (box 
-    :orientation "horizontal"
-    :halign "end"
-    :space-evenly "false"
-    :spacing "100"
-
-    
-    (system)
-    ;(clock)
-
-  )
+(defwidget volume []
+	(circular-progress
+		:value {volume}
+		;:thickness 4
+		;; (eventbox
+		;; 	:css "background-color: red" 
+		;; 	:onclick "pamixer --toggle-mute"
+		;; 	(label
+		;; 		:text {volume}
+		;; 	)
+		;; )
+	)
 )
 
-(defwidget leftgroup []
-  (box
-    :orientation "h"
-    :halign "start"
-    :space-evenly "false"
-    :spacing 20
-
-    
-    (musicplayer)
-    (volume)
-    "thinghere"
-  )
+(defpoll volume :interval "0.1s"
+	"pamixer --get-volume"
 )
+
 
 (defwidget bar []
-  (centerbox 
-    (leftgroup)
-    (rightgroup)
-    (rightgroup)
-  )
+	(centerbox :orientation "h"
+		(left)	
+		(center)
+		(right)
+	)
+)
+
+(defwidget left []
+	(box :orientation "h"
+		;:spaced-evenly "false"
+		:halign "start"
+		(volume)
+	)
+)
+
+(defwidget center []
+	"center"
+)
+
+(defwidget right []
+	"right"
 )
 
 
 (defwindow bar
-  ; will need to make a script to detect weather it is connected to the dock or not
   :monitor 2
-  :geometry (geometry 
-    :x "0%"
-    :y "0%"
-    :width "90%"
-    :height "50px"
-    :anchor "top center"
-    )
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "90%"
+                      :height "10px"
+                      :anchor "top center")
   :reserve (struts :side "top" :distance "4%")
-  :stacking "fg"
-  (bar)
-)
-
+  (bar))

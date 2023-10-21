@@ -11,17 +11,11 @@
       #inputs.nixpkgs.follows = "nixpkgs";
     };
 		
-		nix-colors.url = "github:misterio77/nix-colors";
-
-		#removed bc stylix does not like it
-    # hyprland = {
-    #   url = "github:hyprwm/Hyprland";
-    #   # build with your own instance of nixpkgs
-    #   #inputs.nixpkgs.follows = "nixpkgs";
-    # };
 		stylix = {
 			url = "github:danth/stylix";
 		};
+
+		rust-overlay.url = "github:oxalica/rust-overlay";
 
 		blender.url = "github:edolstra/nix-warez?dir=blender";
 
@@ -31,7 +25,7 @@
     let
       system = "x86_64-linux";
 
-			overlays = [inputs.blender.overlays.default];
+			overlays = [inputs.blender.overlays.default, inputs.rust-overlay.overlays.default];
       pkgs = import inputs.nixpkgs {
         inherit system overlays;
 				config.allowUnfree = true;

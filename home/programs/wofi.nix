@@ -9,7 +9,7 @@
 
 		style = ''
 			#window {
-				border-radius: 20px;
+				border-radius: 40px;
 			}
 		'';
 	};

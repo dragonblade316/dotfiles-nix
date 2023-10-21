@@ -11,5 +11,7 @@
 		gnome.nautilus
 		gnome.gnome-system-monitor
 		brave
+		zoom
+		ardour
 	];
 }

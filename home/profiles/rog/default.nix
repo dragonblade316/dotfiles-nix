@@ -4,7 +4,7 @@
       ../../programs/misc.nix
       ../../themeing.nix
       ../../wayland/hypr
-			../../program/eww
+			../../programs/eww
 			../../wayland/waybar.nix
 			#../../wayland/swaylock.nix
 			../../terminals/kitty.nix
