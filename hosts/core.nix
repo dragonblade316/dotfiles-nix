@@ -96,4 +96,5 @@
   } ];
 
 	services.udisks2.enable = true;
+	virtualisation.virtualbox.host.enable = true;
 }

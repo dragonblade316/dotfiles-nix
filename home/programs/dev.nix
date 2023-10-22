@@ -4,7 +4,9 @@
 		pkgs.rust-bin.stable.latest.default
 		rust-analyzer
 
-		rnix
+		rnix-lsp
+		nixos-shell
+		nix-index
 		
-	]
+	];
 }

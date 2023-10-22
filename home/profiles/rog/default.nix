@@ -9,13 +9,14 @@
 			#../../wayland/swaylock.nix
 			../../terminals/kitty.nix
 			../../programs/mako.nix
-			../../editors/vscode
+			# ../../editors/vscode
 			../../editors/intellij-idea
 			../../programs/art.nix
 			../../programs/comms.nix
 			../../programs/games.nix
 			../../programs/misc.nix
 			../../programs/wofi.nix
+			../../programs/dev.nix
     ];
 
     wayland.windowManager.hyprland.enableNvidiaPatches = true;

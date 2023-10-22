@@ -25,7 +25,7 @@
     let
       system = "x86_64-linux";
 
-			overlays = [inputs.blender.overlays.default, inputs.rust-overlay.overlays.default];
+			overlays = [inputs.blender.overlays.default inputs.rust-overlay.overlays.default];
       pkgs = import inputs.nixpkgs {
         inherit system overlays;
 				config.allowUnfree = true;
@@ -35,6 +35,7 @@
 
     	homeConfigurations = import ./home/profiles {inherit pkgs inputs system; };
 			nixosConfigurations = import ./hosts {inherit inputs system pkgs;};
+			packages = import ./pkgs (inherit pkgs;)
 
 			packages.${system} = {
 	    	inherit pkgs;
