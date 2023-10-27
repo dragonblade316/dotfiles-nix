@@ -1,5 +1,6 @@
 {stdenv, lib
 , fetchurl
+, fetchFromGitHub
 , autoPatchelfHook
 , glib
 , libGL
@@ -17,6 +18,16 @@
 , dbus
 , qtbase
 , wrapQtAppsHook
+, libsForQt5
+, readline
+, libffi_3_3
+, libnsl
+, db
+, libtirpc
+, libxcrypt-legacy
+, remarkable2-toolchain
+, gdbm
+, libtool
 }:
 
 stdenv.mkDerivation rec {
@@ -50,14 +61,47 @@ stdenv.mkDerivation rec {
 		fontconfig
 		dbus
 		qtbase
+		libsForQt5.qt5.qtbase
+		libsForQt5.qt3d
+		libsForQt5.qt5.qtgamepad
+		libsForQt5.qt5.qtxmlpatterns
+		libsForQt5.qt5.qtremoteobjects
+		readline
+		libffi_3_3
+		db
+		libxcrypt-legacy
+		libtirpc
+		remarkable2-toolchain
+		gdbm
+		libtool
+		(libnsl.overrideAttrs {
+		 	version = "1.2.0";
+			src = fetchFromGitHub {
+				owner = "thkukuk";
+				repo = "libnsl";
+				rev = "v1.2.0";
+				sha256 = "sha256-C+mPG0nWiNleHctQLAbMR00PKxMJVqRlUtED+BjEH7I=";
+
+			};
+		 })
 	];
 
   sourceRoot = ".";
 
+	# preBuild = ''
+ #    addAutoPatchelfSearchPath ./cascadeur-linux/lib/
+	# 	addAutoPatchelfSearchPath	./cascadeur-linux/csc-lib/
+ #  '';
+	#
+
   #ngl I have no clue what permisions 755 stands for but it was in the tutorial.
   installPhase = ''
 		mkdir "$out/"
-		cp -r . $out/bin
+		#cp -r ./. $out/bin/
+		cp -R ./cascadeur-linux $out/bin
+
+		cp -R ./cascadeur-linux/lib $out/lib
+		cp -R ./cascadeur-linux/lib $out/lib
   '';
 
   meta = with lib; {

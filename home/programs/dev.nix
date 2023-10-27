@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
 	
 	home.packages = with pkgs; [
 		pkgs.rust-bin.stable.latest.default
@@ -6,7 +6,9 @@
 
 		rnix-lsp
 		nixos-shell
-		nix-index
 		
+		python3
+		nodePackages_latest.pyright
+		#nix-index
 	];
 }

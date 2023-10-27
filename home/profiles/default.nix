@@ -19,6 +19,7 @@ let
 			#inputs.hyprland.homeManagerModules.default
 			#inputs.nix-colors.homeManagerModules.default
 			inputs.stylix.homeManagerModules.stylix
+			inputs.nix-index-database.hmModules.nix-index
     ];
 
     homeImports = {

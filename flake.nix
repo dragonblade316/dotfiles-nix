@@ -19,6 +19,8 @@
 
 		blender.url = "github:edolstra/nix-warez?dir=blender";
 
+		nix-index-database.url = "github:Mic92/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs: 
@@ -35,11 +37,7 @@
 
     	homeConfigurations = import ./home/profiles {inherit pkgs inputs system; };
 			nixosConfigurations = import ./hosts {inherit inputs system pkgs;};
-			packages = import ./pkgs (inherit pkgs;)
-
-			packages.${system} = {
-	    	inherit pkgs;
-			};
+			packages.${system} = import ./pkgs {inherit pkgs;};
     };
 	
 }
