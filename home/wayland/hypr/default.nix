@@ -46,6 +46,11 @@
 				];
 			};
 
+			misc = {
+				vrr = 2;
+			};
+
+
 			bind = [
 				"SUPER, Q, exec, kitty"
 				"SUPER, C, killactive"

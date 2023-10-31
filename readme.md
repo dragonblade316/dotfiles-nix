@@ -10,6 +10,7 @@ There is work needed to finish it but it will hopefully look really good when it
 
 ### Todo:
 - adding an eww config (need time to work on this)
+- fixing vscode
 
 ### Repos I learned from
 https://github.com/fufexan/dotfiles/blob/main/

@@ -73,7 +73,6 @@ stdenv.mkDerivation rec {
 		libtirpc
 		remarkable2-toolchain
 		gdbm
-		libtool
 		(libnsl.overrideAttrs {
 		 	version = "1.2.0";
 			src = fetchFromGitHub {
@@ -88,21 +87,24 @@ stdenv.mkDerivation rec {
 
   sourceRoot = ".";
 
-	# preBuild = ''
- #    addAutoPatchelfSearchPath ./cascadeur-linux/lib/
-	# 	addAutoPatchelfSearchPath	./cascadeur-linux/csc-lib/
- #  '';
-	#
+	preBuild = ''
+    addAutoPatchelfSearchPath ./cascadeur-linux/lib/
+		addAutoPatchelfSearchPath	./cascadeur-linux/csc-lib/
+  '';
+
 
   #ngl I have no clue what permisions 755 stands for but it was in the tutorial.
   installPhase = ''
 		mkdir "$out/"
-		#cp -r ./. $out/bin/
 		cp -R ./cascadeur-linux $out/bin
 
-		cp -R ./cascadeur-linux/lib $out/lib
-		cp -R ./cascadeur-linux/lib $out/lib
+		# cp -R ./cascadeur-linux/lib $out/lib
   '';
+
+	# postFixup = ''
+	# 	wrapProgram $out/bin/cascadeur \
+	# 		--set LD_LIBRARY_PATH $out/lib
+	# '';
 
   meta = with lib; {
     homepage = "https://www.cascadeur.com/";

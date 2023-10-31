@@ -29,8 +29,8 @@ cmp.setup(
     --['<C-b>'] = cmp_action.luasnip_jump_backward(),
 
     -- Scroll up and down in the completion documentation
-    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-d>'] = cmp.mapping.scroll_docs(4),
+    ['<C-j>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-k>'] = cmp.mapping.scroll_docs(4),
     })
   }
 )

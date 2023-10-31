@@ -21,6 +21,10 @@
   services.xserver.displayManager.defaultSession = "hyprland";
 
 
+	hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
+
   #<nvidia>
   # Make sure opengl is enabled
   hardware.opengl = {
@@ -74,6 +78,7 @@
     xwayland.enable = true;
     nvidiaPatches = true;
   };
+
 }
 
 

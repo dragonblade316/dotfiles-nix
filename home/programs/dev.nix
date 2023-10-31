@@ -9,6 +9,9 @@
 		
 		python3
 		nodePackages_latest.pyright
+
+		java-language-server
+		kotlin-language-server
 		#nix-index
 	];
 }

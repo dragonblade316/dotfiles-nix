@@ -13,7 +13,8 @@
 	# programs.gh = {
 	# 	enable = true;
 	# };
-
+	
+	#ngl I kinda hate that this works but the above does not. I should probably fix it but it does not matter now
 	home.packages = with pkgs; [
 		gh
 	];

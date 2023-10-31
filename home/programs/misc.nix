@@ -18,5 +18,9 @@ in {
 		ardour
 		# selfbuilt.cascadeur
 		wineWowPackages.waylandFull
+		# xwaylandvideobridge
+		blueman
+		steam-run
+
 	];
 }
