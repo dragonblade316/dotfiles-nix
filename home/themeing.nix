@@ -1,6 +1,6 @@
 {config, pkgs, ...}: 
 let
-	wallpaper = ./wallpapers/sans.png;
+	wallpaper = ./wallpapers/cat_bunnies.png;
 
 
 in {  
@@ -10,6 +10,9 @@ in {
 		autoEnable = true;
 		opacity.terminal = 0.5;
 	};
+
+	stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+
 
 	#wallpaper stuff
 	home = {

@@ -16,10 +16,15 @@
 
   networking.hostName = "dragonblade316"; # Define your hostname.
 
+	networking.firewall = {
+		enable = true;
+		allowedTCPPorts = [ 53317 ];
+		allowedUDPPorts = [ 53317 ];
+	};
+
   services.xserver.enable = true;    
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.displayManager.defaultSession = "hyprland";
-
 
 	hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
@@ -78,6 +83,8 @@
     xwayland.enable = true;
     nvidiaPatches = true;
   };
+
+	services.blueman.enable = true;
 
 }
 

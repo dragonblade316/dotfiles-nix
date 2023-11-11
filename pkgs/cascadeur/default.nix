@@ -99,6 +99,8 @@ stdenv.mkDerivation rec {
 		cp -R ./cascadeur-linux $out/bin
 
 		# cp -R ./cascadeur-linux/lib $out/lib
+
+		runHook postInstall
   '';
 
 	# postFixup = ''

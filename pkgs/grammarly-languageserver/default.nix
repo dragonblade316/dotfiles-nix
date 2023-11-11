@@ -1,18 +1,24 @@
-{lib
+{stdenv
+, lib
 , buildNpmPackage
-, fetchFromGithub
-}: buildNpmPackage rec {
+, fetchFromGitHub
+}: stdenv.mkDeivation rec {
 	pname = "grammerly-languageserver";
 	version = "0.22.1";
 
-	src = fetchFromGithub {
+	src = fetchFromGitHub {
 		owner = "znck";
-		repo = "grammerly";
+		repo = "grammarly";
 		rev = "v${version}";
-		sha256 = "";
+		sha256 = "sha256-ZEznR2hbi2cQZyvV5OKjHBUEPX/j1s/eMRCzvYHzySI";
 	};
 
-	npmDepsHash = "";
+
+
+	build = ''
+		'';
+
+	
 
 	meta = with lib; {
 		description = "A language server to interact with grammerly";

@@ -21,6 +21,8 @@ in {
 		# xwaylandvideobridge
 		blueman
 		steam-run
+		pavucontrol
+		localsend
 
 	];
 }

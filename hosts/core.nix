@@ -12,7 +12,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-    # Enable sound with pipewire.
+  # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -65,7 +65,7 @@
 
   users.users.dragonblade316 = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.fish;
     packages = with pkgs; [
       git

@@ -31,6 +31,7 @@
 			nvim-autopairs
 
       which-key-nvim
+			trouble-nvim
       telescope-nvim
       nvim-lspconfig
       nvim-tree-lua
@@ -46,6 +47,7 @@
       lualine-nvim
       nvim-web-devicons
       barbar-nvim
+			firenvim
     ];
     
 
