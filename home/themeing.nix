@@ -1,6 +1,6 @@
 {config, pkgs, ...}: 
 let
-	wallpaper = ./wallpapers/cat_bunnies.png;
+	wallpaper = ./wallpapers/sans.png;
 
 
 in {  
