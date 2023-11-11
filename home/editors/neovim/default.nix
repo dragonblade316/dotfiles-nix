@@ -39,10 +39,10 @@
       leap-nvim
 			flash-nvim
       comment-nvim
-      {
-        plugin = tokyonight-nvim;
-        config = "colorscheme tokyonight";
-      }
+      #{
+      #  plugin = tokyonight-nvim;
+      #  config = "colorscheme tokyonight";
+      #}
 
       lualine-nvim
       nvim-web-devicons

@@ -1,13 +1,14 @@
 {config, pkgs, ...}: 
 let
-	wallpaper = ./wallpapers/sans.png;
+	#wallpaper = ./wallpapers/sans.png;
+	wallpaper = ./wallpapers/cat_bunnies.png;
 
 
 in {  
 	stylix = {
 		image = wallpaper;
 		polarity = "dark";
-		autoEnable = true;
+		#autoEnable = true;
 		opacity.terminal = 0.5;
 	};
 
