@@ -18,8 +18,8 @@
 
 	networking.firewall = {
 		enable = true;
-		allowedTCPPorts = [ 53317 ];
-		allowedUDPPorts = [ 53317 ];
+		allowedTCPPorts = [ 53317 631 ];
+		allowedUDPPorts = [ 53317 631 ];
 	};
 
   services.xserver.enable = true;    
@@ -28,6 +28,25 @@
 
 	hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
+
+	services.printing = {
+  	listenAddresses = [ "*:631" ];
+  	allowFrom = [ "all" ];
+  	browsing = true;
+  	defaultShared = true;
+	};
+
+	services.avahi = {
+  enable = true;
+  nssmdns = true;
+  openFirewall = true;
+  publish = {
+    	enable = true;
+    	userServices = true;
+  	};
+	};
+
 
 
   #<nvidia>
@@ -76,7 +95,9 @@
     amdgpuBusId = "PCI:6:0:0";
     nvidiaBusId = "PCI:1:0:0";
   };
+
   #</nvidia>
+
 
   programs.hyprland = { # or wayland.windowManager.hyprland
     enable = true;
