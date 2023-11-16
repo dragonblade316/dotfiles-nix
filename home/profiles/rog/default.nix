@@ -17,6 +17,7 @@
 			../../programs/misc.nix
 			../../programs/wofi.nix
 			../../programs/dev.nix
+			../../shell/nushell.nix
     ];
 
     wayland.windowManager.hyprland.enableNvidiaPatches = true;

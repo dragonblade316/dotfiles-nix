@@ -7,7 +7,6 @@
 		(blender.override {
       cudaSupport = true;
     })
-		#blender_3_6
 		freecad
 		godot_4
 	];

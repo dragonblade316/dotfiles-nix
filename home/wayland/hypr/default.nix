@@ -8,6 +8,7 @@
 				"waybar" 
 				"udiskie &"
 				"hyprpaper"
+				"xwaylandvideobridge"
 			];
 			
 			input = {
