@@ -7,6 +7,9 @@ require("nvim-tree").setup()
 require("barbar").setup()
 require("nvim-autopairs").setup()
 require("trouble").setup()
+require("better_escape").setup()
+require("noice").setup()
+
 
 
 vim.opt.spell = true

@@ -1,4 +1,4 @@
-{pkgs, inputs, nixvim, ...}: {
+{pkgs, inputs, ...}: {
 #  programs.nixvim = {
 #    enable = true;
 
@@ -31,6 +31,7 @@
 			nvim-autopairs
 
       which-key-nvim
+			better-escape-nvim
 			trouble-nvim
       telescope-nvim
       nvim-lspconfig
@@ -39,10 +40,9 @@
       leap-nvim
 			flash-nvim
       comment-nvim
-      #{
-      #  plugin = tokyonight-nvim;
-      #  config = "colorscheme tokyonight";
-      #}
+			better-escape-nvim
+			nui-nvim
+			noice-nvim
 
       lualine-nvim
       nvim-web-devicons

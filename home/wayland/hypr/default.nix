@@ -49,10 +49,10 @@
 				];
 			};
 
-			misc = {
-				vrr = 2;
-			};
-
+			# misc = {
+			# 	vrr = 1;
+			# };
+			#
 
 			bind = [
 				"SUPER, Q, exec, kitty"
