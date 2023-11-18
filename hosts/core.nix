@@ -105,8 +105,13 @@
 			ids = ["*"];
 			settings = {
 				main = {
-    			capslock = "overload(control, esc)";
+    			capslock = "backspace";
+					rightalt = "layer(rightalt)";
   			};
+
+				rightalt = {
+					e = "esc";
+				};
 			};
 		};
 	};

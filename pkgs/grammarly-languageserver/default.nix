@@ -1,10 +1,11 @@
 {stdenv
 , lib
-, buildNpmPackage
 , fetchFromGitHub
-}: stdenv.mkDeivation rec {
+, nodePackages.pnpm
+, nodejs_21
+}: stdenv.mkDerivation rec {
 	pname = "grammerly-languageserver";
-	version = "0.22.1";
+	version = "0.24.0";
 
 	src = fetchFromGitHub {
 		owner = "znck";
@@ -13,12 +14,17 @@
 		sha256 = "sha256-ZEznR2hbi2cQZyvV5OKjHBUEPX/j1s/eMRCzvYHzySI";
 	};
 
+	buildInputs = [
+		nodejs_21
+	];
 
+	nativeBuildInputs = [
+		nodePackages.pnpm		
+	];
 
-	build = ''
-		'';
-
-	
+	installPhase = ''
+		pnpm install --frozen-lockfile
+	'';
 
 	meta = with lib; {
 		description = "A language server to interact with grammerly";
