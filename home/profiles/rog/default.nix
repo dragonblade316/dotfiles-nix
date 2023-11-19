@@ -16,7 +16,7 @@
 			../../programs/games.nix
 			../../programs/misc.nix
 			../../programs/wofi.nix
-			../../programs/rofi.nix
+			../../programs/rofi
 			../../programs/dev.nix
 			../../shell/nushell.nix
     ];

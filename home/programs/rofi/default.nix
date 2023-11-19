@@ -1,9 +1,8 @@
 {
 	programs.rofi = {
 		enable = true;
-		location = "center";
+		location = "top";
 		
-		configPath = ./style-3.rasi;
 		
 		extraConfig = {
       modi = "drun,run";
