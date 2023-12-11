@@ -81,6 +81,11 @@
 			};
 		};
 
+
+		"temperature" = {
+			format = "{temperatureC}°C ";
+		};
+
 		#TODO rewrite this to take advantage of nix colors
 		style = ''
 		 	* {

@@ -16,7 +16,8 @@
 			../../programs/games.nix
 			../../programs/misc.nix
 			../../programs/wofi.nix
-			../../programs/rofi
+			../../programs/rofi.nix
+			../../programs/fuzzel.nix
 			../../programs/dev.nix
 			../../shell/nushell.nix
 			../../programs/kdeconnect.nix
