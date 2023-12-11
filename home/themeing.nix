@@ -10,6 +10,11 @@ in {
 		polarity = "dark";
 		#autoEnable = true;
 		opacity.terminal = 0.5;
+
+		cursor = {
+			package = pkgs.catppuccin-cursors;
+			name = "macchiatoDark";
+		};
 	};
 
 	stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";

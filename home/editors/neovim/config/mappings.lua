@@ -7,9 +7,13 @@ wk.setup({})
 
 wk.register({
   ["<leader>"] = {
-		["/"] = {"<cmd> '<,'>CommentToggle <cr>"},
-		r = {"<cmd> Trouble <cr>"},
-		e = {"<cmd> NvimTreeToggle <cr>"}, 
+		["/"] = {"<cmd> '<,'>CommentToggle <cr>", "should probably be removed"},
+		r = {"<cmd> Trouble <cr>", "Trouble"},
+		e = {"<cmd> NvimTreeToggle <cr>", "Filetree"}, 
+		t = {
+			t = {"cmd Telescope <cr>", "telescope"},
+		},
+		a = {"<cmd> CodeActionMenu <cr>", "Code Actions"},
   },
 })
 

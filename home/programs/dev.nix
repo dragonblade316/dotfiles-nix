@@ -4,6 +4,9 @@
 		pkgs.rust-bin.stable.latest.default
 		rust-analyzer
 
+		ccls
+		libclang
+
 		rnix-lsp
 		nixos-shell
 		

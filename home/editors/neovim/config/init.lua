@@ -9,6 +9,7 @@ require("nvim-autopairs").setup()
 require("trouble").setup()
 require("better_escape").setup()
 require("noice").setup()
+require("auto-save").setup()
 
 
 

@@ -25,7 +25,6 @@
 , db
 , libtirpc
 , libxcrypt-legacy
-, remarkable2-toolchain
 , gdbm
 , libtool
 }:
@@ -71,7 +70,6 @@ stdenv.mkDerivation rec {
 		db
 		libxcrypt-legacy
 		libtirpc
-		remarkable2-toolchain
 		gdbm
 		(libnsl.overrideAttrs {
 		 	version = "1.2.0";
@@ -87,10 +85,10 @@ stdenv.mkDerivation rec {
 
   sourceRoot = ".";
 
-	preBuild = ''
-    addAutoPatchelfSearchPath ./cascadeur-linux/lib/
-		addAutoPatchelfSearchPath	./cascadeur-linux/csc-lib/
-  '';
+	# preBuild = ''
+ #    addAutoPatchelfSearchPath ./cascadeur-linux/lib/
+	# 	addAutoPatchelfSearchPath	./cascadeur-linux/csc-lib/
+ #  '';
 
 
   #ngl I have no clue what permisions 755 stands for but it was in the tutorial.

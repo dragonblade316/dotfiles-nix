@@ -47,7 +47,7 @@
   	};
 	};
 
-
+	services.udev.packages = [ pkgs.mixxx ];
 
   #<nvidia>
   # Make sure opengl is enabled

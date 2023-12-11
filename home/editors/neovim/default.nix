@@ -28,11 +28,18 @@
       cmp-spell
 			cmp-tabnine
       lsp-zero-nvim
-			nvim-autopairs
+			nvim-dap
+			
+			#to my minor annoyence the plugin for rust that comes with debugging support also does its own lsp stuff. this means I will probably need to do some rethinking in lspconfig.lua
+			rust-tools-nvim
 
+			
+			nvim-code-action-menu
+			nvim-autopairs
       which-key-nvim
 			better-escape-nvim
 			trouble-nvim
+			auto-save-nvim
       telescope-nvim
       nvim-lspconfig
       nvim-tree-lua

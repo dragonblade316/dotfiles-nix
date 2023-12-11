@@ -5,6 +5,7 @@
 		obs-studio
 		audacity
 		easyeffects
+		noisetorch
 		davinci-resolve
 		cura
 		(blender.override {
@@ -12,5 +13,6 @@
     })
 		freecad
 		godot_4
+		mixxx
 	];
 }

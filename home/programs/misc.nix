@@ -28,6 +28,6 @@ in {
 		pavucontrol
 		localsend
 		xwaylandvideobridge
-
+		bottles
 	];
 }

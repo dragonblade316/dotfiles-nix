@@ -1,4 +1,5 @@
 local lspc = require("lspconfig")
+
 local lsp_zero = require("lsp-zero")
 
 lsp_zero.on_attach(function(client, bufnr)
@@ -7,15 +8,26 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
---lspc.rust_analyzer.setup({})
+--
+--rust spesific stuff
+--local rust_tools = require('rust-tools')
 
+-- rust_tools.setup({
+--   server = {
+--     on_attach = function(client, bufnr)
+--       vim.keymap.set('n', '<leader>ca', rust_tools.hover_actions.hover_actions, {buffer = bufnr})
+--     end
+--   }
+-- })
+--
 lsp_zero.setup_servers({
+	'rust_analyzer',
 	'lua_ls', 
-	"rust_analyzer", 
 	'rnix', 
 	'pyright', 
 	'kotlin_language_server',
 	'java_language_server',
 	"gradle_ls",
-	'cssls'
+	'cssls',
+	'ccls',
 })
