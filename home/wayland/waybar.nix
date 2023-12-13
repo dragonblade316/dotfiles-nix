@@ -8,7 +8,7 @@
 
 				modules-left = ["mpris" "wireplumber"];
 				modules-center = ["hyprland/workspaces" "hyprland/window"];
-				modules-right = ["battery" "cpu" "memory" "network" "tray" "clock"];
+				modules-right = ["battery" "cpu" "temperature" "memory" "network" "tray" "clock"];
 
 
 				"mpris" = {
@@ -78,14 +78,15 @@
 					max-length = 50;
 					on-click = "kitty nmtui";
 				};
+
+				"temperature" = {
+					format = "{temperatureC}°C ";
+				};
 			};
 		};
 
 
-		"temperature" = {
-			format = "{temperatureC}°C ";
-		};
-
+		
 		#TODO rewrite this to take advantage of nix colors
 		style = ''
 		 	* {

@@ -63,7 +63,7 @@
 				"SUPER, E, exec, nautilus"
 				"SUPER, F, togglefloating"
 				"SUPERALT, F, fullscreen"
-				"SUPER, R, exec, wofi"
+				"SUPER, R, exec, fuzzel"
 				#need a toggle split keybind
 				"SUPER, G, togglesplit"
 				"SUPER, S, exec, grim -g $(slurp)"

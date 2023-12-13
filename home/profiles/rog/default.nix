@@ -6,7 +6,6 @@
       ../../wayland/hypr
 			../../programs/eww
 			../../wayland/waybar.nix
-			#../../wayland/swaylock.nix
 			../../terminals/kitty.nix
 			../../programs/mako.nix
 			../../editors/vscode
@@ -15,8 +14,6 @@
 			../../programs/comms.nix
 			../../programs/games.nix
 			../../programs/misc.nix
-			../../programs/wofi.nix
-			../../programs/rofi.nix
 			../../programs/fuzzel.nix
 			../../programs/dev.nix
 			../../shell/nushell.nix

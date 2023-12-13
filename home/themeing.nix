@@ -15,6 +15,27 @@ in {
 			package = pkgs.catppuccin-cursors;
 			name = "macchiatoDark";
 		};
+
+		fonts = {
+          serif = {
+              package = pkgs.nerdfonts;
+              name = "FiraCode Nerd Font Mono";
+          };
+          sansSerif = {
+              package = pkgs.nerdfonts;
+              name = "FiraCode Nerd Font Mono";
+          };
+          monospace = {
+              package = pkgs.nerdfonts;
+              name = "FiraCode Nerd Font Mono";
+          };
+          sizes = {
+              desktop = 12;
+              applications = 15;
+              terminal = 15;
+              popups = 12;
+          };
+      };
 	};
 
 	stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
