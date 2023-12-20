@@ -3,7 +3,7 @@
 		steam
 		winetricks
 		protontricks
-    (lutris.override { extraLibraries = pkgs: [pkgs.libunwind ]; })
+    (lutris.override { extraLibraries = pkgs: [pkgs.libunwind]; })
 		heroic
 		xonotic
 		grapejuice

@@ -128,6 +128,10 @@
 			windowrulev2 = nofocus,class:^(xwaylandvideobridge)$
 			windowrulev2 = noinitialfocus,class:^(xwaylandvideobridge)$
 		'';
+
+		# plugins = [
+		# 	inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
+		# ];
 	};
 
 }

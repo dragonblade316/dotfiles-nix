@@ -78,7 +78,7 @@
 
       home-manager
       
-      cudatoolkit #move to envirment
+      # cudatoolkit #move to envirment
       pamixer
       udiskie
 

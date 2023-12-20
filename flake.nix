@@ -19,6 +19,13 @@
 
 		rust-overlay.url = "github:oxalica/rust-overlay";
 
+		hyprland-plugins = {
+    	url = "github:hyprwm/hyprland-plugins";
+
+			#ima regret removing this later.
+			#inputs.hyprland.follows = "hyprland";
+  	};
+
 		blender.url = "github:edolstra/nix-warez?dir=blender";
 
 		nix-index-database.url = "github:Mic92/nix-index-database";

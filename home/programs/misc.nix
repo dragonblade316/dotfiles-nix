@@ -5,6 +5,8 @@ let
 in {
 	 nixpkgs.config.permittedInsecurePackages = [
    	"electron-24.8.6"
+		"electron-25.9.0"
+		"electron-19.1.9"
    ];
 	#eventually all of this will probably be moved to other files as the config grows but for now this is a dumping ground
 	home.packages = with pkgs; [
@@ -29,5 +31,6 @@ in {
 		localsend
 		xwaylandvideobridge
 		bottles
+		etcher
 	];
 }
