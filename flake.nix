@@ -26,6 +26,11 @@
 			#inputs.hyprland.follows = "hyprland";
   	};
 
+	nixos-wsl = {
+      url = "github:nix-community/NixOS-WSL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
 		blender.url = "github:edolstra/nix-warez?dir=blender";
 
 		nix-index-database.url = "github:Mic92/nix-index-database";

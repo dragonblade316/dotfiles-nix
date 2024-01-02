@@ -22,7 +22,8 @@ in {
     inherit system;
     modules = [
       ./wsl
-      ./core.nix  
+      ./core.nix
+      inputs.nixos-wsl  
     ];
   };
 }

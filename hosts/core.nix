@@ -29,7 +29,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  hardware.opengl.enable = true;
 
   networking.networkmanager.enable = true;
 
