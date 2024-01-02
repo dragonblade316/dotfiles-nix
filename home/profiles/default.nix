@@ -36,7 +36,6 @@ let
 
 
 in {
-  dragonblade316 = mkHome { conf = ./rog; };
-  	
-
+  "dragonblade316@rog" = mkHome { conf = ./rog; };
+  "dragonblade316@wsl" = mkHome { conf = ./wsl; };
 }
