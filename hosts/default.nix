@@ -9,10 +9,19 @@ with inputs;
 let
   inherit (nixpkgs.lib) nixosSystem;
 in {
+  main = nixosSystem {
+    inherit system;
+    modules = [
+      ./main
+      ./modules/desktop.nix
+      ./core.nix
+    ];
+  }
+
   rog = nixosSystem {
       inherit system;
       modules = [
-       ./rog
+       ./main
        ./modules/desktop.nix
        ./core.nix
       ];
