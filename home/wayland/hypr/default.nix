@@ -115,13 +115,13 @@
 
 		extraConfig = ''
 			#monitor=,preferred,auto,auto
-			monitor= eDP-1, 2560x1440@165, 5760x720, 1
-			workspace=eDP-1,2
-			monitor= DP-1, 3840x2160@60, 1920x0, 1
-			workspace DP-1,1
-			monitor= HDMI-A-1, 1920x1080@60, 0x1080, 1
-			workspace=HDMI-A-1,3
-
+			# monitor= eDP-1, 2560x1440@165, 5760x720, 1
+			# workspace=eDP-1,2
+			# monitor= DP-1, 3840x2160@60, 1920x0, 1
+			# workspace DP-1,1
+			# monitor= HDMI-A-1, 1920x1080@60, 0x1080, 1
+			# workspace=HDMI-A-1,3
+	
 			#for some reason home manager did not like the windowrulev2. will need to figure out how to set it up but I am too tired right now.
 			windowrulev2 = opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$
 			windowrulev2 = noanim,class:^(xwaylandvideobridge)$

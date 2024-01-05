@@ -47,7 +47,7 @@ in {
 				preload = ${wallpaper}
 				wallpaper = HDMI-A-1, ${wallpaper} 
 				wallpaper = eDP-1, ${wallpaper}
-				wallpaper = DP-1, ${wallpaper}
+				wallpaper = DP-3, ${wallpaper}
 			'';
 		
 		packages = with pkgs; [

@@ -8,9 +8,9 @@
 		noisetorch
 		davinci-resolve
 		cura
-		(blender.override {
-      cudaSupport = true;
-    })
+#		(blender.override {
+ #     cudaSupport = true;
+  #  })
 		freecad
 		godot_4
 		mixxx
