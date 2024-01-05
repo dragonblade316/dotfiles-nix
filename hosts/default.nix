@@ -16,7 +16,7 @@ in {
       ./modules/desktop.nix
       ./core.nix
     ];
-  }
+  };
 
   rog = nixosSystem {
       inherit system;
