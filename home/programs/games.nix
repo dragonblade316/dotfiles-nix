@@ -9,5 +9,4 @@
 		grapejuice
 		prismlauncher
 	];
-
 }

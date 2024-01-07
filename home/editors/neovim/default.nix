@@ -25,15 +25,17 @@
       cmp-nvim-lsp
       cmp-buffer
       cmp-treesitter
+			cmp_luasnip
       cmp-spell
 			cmp-tabnine
       lsp-zero-nvim
+			none-ls-nvim
 			nvim-dap
 			
 			#to my minor annoyence the plugin for rust that comes with debugging support also does its own lsp stuff. this means I will probably need to do some rethinking in lspconfig.lua
 			# rust-tools-nvim
 
-			
+			luasnip
 			nvim-code-action-menu
 			nvim-autopairs
       which-key-nvim
@@ -66,7 +68,7 @@
         "init"
         "lspconfig"
         "nvim-cmp"
-        "treesitter"
+        # "treesitter"
         "mappings"
 				"opts"
       ]);

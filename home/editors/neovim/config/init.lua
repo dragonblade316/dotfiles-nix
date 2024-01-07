@@ -8,7 +8,8 @@ require("barbar").setup()
 require("nvim-autopairs").setup()
 require("trouble").setup()
 require("better_escape").setup()
-require("noice").setup()
+-- this is causing treesitter query errors for some reason
+-- require("noice").setup()
 require("auto-save").setup()
 
 

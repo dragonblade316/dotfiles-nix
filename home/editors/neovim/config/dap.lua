@@ -11,20 +11,30 @@ dap.adapters.codelldb = {
 }
 
 --I want to use gdb for c/cpp debugging 
-dap.adapters.gdb = {
-  type = "executable",
-  command = "gdb",
-  args = { "-i", "dap" }
-}
+-- dap.adapters.gdb = {
+--   type = "executable",
+--   command = "gdb",
+--   args = { "-i", "dap" }
+-- }
+--
+-- dap.configurations.c = {
+--   {
+--     name = "Launch",
+--     type = "gdb",
+--     request = "launch",
+--     program = function()
+--       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+--     end,
+--     cwd = "${workspaceFolder}",
 
-dap.configurations.c = {
-  {
-    name = "Launch",
-    type = "gdb",
-    request = "launch",
-    program = function()
-      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-    end,
-    cwd = "${workspaceFolder}",
-  },
+
+dap.configurations.rust = {
+	name = "Rust",
+	type = "lldb",
+	request = "launch",
+      program = function()
+          return vim.fn.getcwd() .. "/target/debug/hello-dap"
+      end,
+  cwd = "${workspaceFolder}",
+  stopOnEntry = false,
 }

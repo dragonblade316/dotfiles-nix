@@ -1,5 +1,5 @@
 let
-  flakePath = "/home/dragonblade316/Programming/nixos_config/";
+  flakePath = "/home/dragonblade316/Programming/dotfiles/";
     
 in {
   home.shellAliases = {

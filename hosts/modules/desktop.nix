@@ -1,7 +1,11 @@
 {
     #this file will be included by any configuration with sound and monitor
 
-    hardware.opengl.enable = true;
+    hardware.opengl = {
+			enable = true;
+			driSupport = true;
+			driSupport32Bit = true;
+		};
 
     # Enable sound with pipewire.
     sound.enable = true;

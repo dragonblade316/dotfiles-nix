@@ -39,7 +39,18 @@ in {
 	};
 
 	stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+	
 
+	#temp until I get candy icons working
+	gtk.iconTheme = {
+		package = pkgs.kora-icon-theme;
+		name = "kora-grey";
+	};
+	
+	qt = {
+		enable = true;
+		platformTheme = "gtk3";
+	};
 
 	#wallpaper stuff
 	home = {
@@ -53,5 +64,6 @@ in {
 		packages = with pkgs; [
 			hyprpaper
 		];
+
 	};
 }
