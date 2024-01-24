@@ -7,8 +7,7 @@
 		  ../../programs/eww
 			../../wayland/waybar.nix
 			../../terminals/kitty.nix
-			# ../../programs/mako.nix
-			../../programs/dunst.nix
+			../../programs/mako.nix
 			../../editors/vscode
 			../../editors/intellij-idea
 			../../programs/art.nix
@@ -17,6 +16,7 @@
 			../../programs/misc.nix
 			../../programs/fuzzel.nix
 			../../programs/dev.nix
+			../../programs/syncthing.nix
 			../../shell/nushell.nix
 			../../programs/kdeconnect.nix
     ];

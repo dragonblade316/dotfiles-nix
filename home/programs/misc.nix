@@ -17,6 +17,7 @@ in {
 		gparted
 		wdisplays
 		gnome.nautilus
+		libsForQt5.dolphin
 		gnome.gnome-system-monitor
 		brave
 		thunderbird

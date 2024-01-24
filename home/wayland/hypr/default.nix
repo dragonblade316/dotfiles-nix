@@ -68,6 +68,9 @@
 				"SUPER, G, togglesplit"
 				"SUPER, S, exec, grim -g $(slurp)"
 
+				"SUPERALT, j, exec, makoctl dismiss" 
+				"SUPERALT, k, exec, makoctl restore"
+
 				
 				#vim bindings
 				"SUPER, h, movefocus, l"

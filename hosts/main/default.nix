@@ -17,8 +17,8 @@
 
   networking.firewall = {
   	enable = true;
-  	  allowedTCPPorts = [ 53317 631 ];
-	  allowedUDPPorts = [ 53317 631 ];
+  	  allowedTCPPorts = [ 53317 631 22000 ];
+		  allowedUDPPorts = [ 53317 631 22000 ];
   };
 
   services.xserver.enable = true;    
@@ -57,6 +57,10 @@
     enable = true;
     xwayland.enable = true;
   };
+
+	#trying to get gparted to work
+	security.polkit.enable = true;
+
 
 
 	services.blueman.enable = true;

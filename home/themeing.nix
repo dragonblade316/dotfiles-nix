@@ -49,7 +49,7 @@ in {
 	
 	qt = {
 		enable = true;
-		platformTheme = "gtk3";
+		platformTheme = "qtct";
 	};
 
 	#wallpaper stuff
