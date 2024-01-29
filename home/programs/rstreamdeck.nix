@@ -1,5 +1,5 @@
-{inputs, ...}: {
-	home.packages = [
-		inputs.rstreamdeck
+{pkgs, ...}: {
+	home.packages = with pkgs; [
+		rstreamdeck
 	];
 }

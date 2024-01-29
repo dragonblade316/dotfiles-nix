@@ -17,6 +17,7 @@
 			../../programs/fuzzel.nix
 			../../programs/dev.nix
 			../../programs/syncthing.nix
+			# ../../programs/rstreamdeck.nix
     ];
 		wayland.windowManager.hyprland.extraConfig = ''
 			#monitor=,preferred,auto,auto

@@ -33,5 +33,6 @@ in {
 		xwaylandvideobridge
 		bottles
 		etcher
+		rstreamdeck
 	];
 }

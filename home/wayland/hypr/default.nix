@@ -10,6 +10,7 @@
 				"hyprpaper"
 				"xwaylandvideobridge"
 				"blueman-applet"
+				"Rstreamdeck"
 			];
 			
 			input = {
