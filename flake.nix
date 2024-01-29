@@ -2,12 +2,13 @@
   description = "dragonblade316's configuration files";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
-		#nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     
     # Home manager
     hm = {
-      url = "github:nix-community/home-manager/release-23.11";
+			url = "github:nix-community/home-manager/";
+      # url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -17,13 +18,17 @@
 			url = "github:danth/stylix";
 		};
 
+		rstreamdeck = {
+			url = "github:dragonblade316/rstreamdeck";
+		};
+
 		rust-overlay.url = "github:oxalica/rust-overlay";
 
 		hyprland-plugins = {
     	url = "github:hyprwm/hyprland-plugins";
 
 			#ima regret removing this later.
-			#inputs.hyprland.follows = "hyprland";
+			#inputs.hyprland.follows = "hyprland"; 
   	};
 
 	nixos-wsl = {

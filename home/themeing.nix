@@ -8,7 +8,6 @@ in {
 	stylix = {
 		image = wallpaper;
 		polarity = "dark";
-		#autoEnable = true;
 		opacity.terminal = 0.5;
 
 		cursor = {
@@ -39,6 +38,8 @@ in {
 	};
 
 	stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+
+	stylix.targets.bemenu.enable = false;
 	
 
 	#temp until I get candy icons working

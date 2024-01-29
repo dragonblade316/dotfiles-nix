@@ -6,7 +6,7 @@
 		audacity
 		easyeffects
 		noisetorch
-		davinci-resolve
+		# davinci-resolve
 		cura
 #		(blender.override {
  #     cudaSupport = true;

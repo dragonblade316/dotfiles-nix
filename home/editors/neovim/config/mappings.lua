@@ -8,7 +8,7 @@ wk.setup({})
 wk.register({
   ["<leader>"] = {
 		["/"] = {"<cmd> '<,'>CommentToggle <cr>", "should probably be removed"},
-		r = {"<cmd> Trouble <cr>", "Trouble"},
+		r = {"<cmd> TroubleToggle <cr>", "Trouble"},
 		e = {"<cmd> NvimTreeToggle <cr>", "Filetree"}, 
 		t = {
 			t = {"cmd Telescope <cr>", "telescope"},

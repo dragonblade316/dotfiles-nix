@@ -14,7 +14,8 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "dragonblade316"; # Define your hostname.
-
+	system.name = "dreadnought";
+	
   networking.firewall = {
   	enable = true;
   	  allowedTCPPorts = [ 53317 631 22000 ];
