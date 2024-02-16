@@ -534,11 +534,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1706512762,
-        "narHash": "sha256-e9ndLJwtE2gYWaw633SctViQ/4tMQ4R7zgrwTGN9CKg=",
+        "lastModified": 1707030075,
+        "narHash": "sha256-Bvck0WJxQZNYfKkzlIvi2ghSVgZDnUUmDGoaLw5BUJs=",
         "owner": "dragonblade316",
         "repo": "rstreamdeck",
-        "rev": "1de16725f1d216d6f1914ed64da737db31a53847",
+        "rev": "76ab1cf6d50161aea10bee66f15457be86399f09",
         "type": "github"
       },
       "original": {

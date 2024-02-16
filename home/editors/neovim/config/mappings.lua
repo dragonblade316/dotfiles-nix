@@ -7,12 +7,10 @@ wk.setup({})
 
 wk.register({
   ["<leader>"] = {
-		["/"] = {"<cmd> '<,'>CommentToggle <cr>", "should probably be removed"},
+		["/"] = { "<cmd>Telescope live_grep<cr>", "Live Grep"} ,
+		f = { "<cmd>Telescope find_files<cr>", "Find Files"},
 		r = {"<cmd> TroubleToggle <cr>", "Trouble"},
 		e = {"<cmd> NvimTreeToggle <cr>", "Filetree"}, 
-		t = {
-			t = {"cmd Telescope <cr>", "telescope"},
-		},
 		a = {"<cmd> CodeActionMenu <cr>", "Code Actions"},
   },
 })

@@ -9,5 +9,8 @@ in {
     homerebuild = "home-manager switch --flake ${flakePath}";
 		homerebuildb = "home-manager switch -b backup --flake ${flakePath}";
 		nixp = "cd ${flakePath}";
+
+		grep = "rg";
+		# cd = "z";
   };
 }

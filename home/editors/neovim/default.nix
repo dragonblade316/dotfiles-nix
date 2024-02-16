@@ -42,7 +42,6 @@
 			better-escape-nvim
 			trouble-nvim
 			auto-save-nvim
-      telescope-nvim
       nvim-lspconfig
       nvim-tree-lua
       (nvim-treesitter.withPlugins (_: pkgs.tree-sitter.allGrammars))
@@ -52,6 +51,10 @@
 			better-escape-nvim
 			nui-nvim
 			noice-nvim
+
+      telescope-nvim
+      telescope-fzy-native-nvim
+
 
       lualine-nvim
       nvim-web-devicons

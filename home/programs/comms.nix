@@ -7,4 +7,6 @@
 		})
 		fractal
 	];
+	
+	services.easyeffects.enable = true;
 }
