@@ -34,5 +34,7 @@ in {
 		bottles
 		etcher
 		rstreamdeck
+
+		jupytext-nvim
 	];
 }

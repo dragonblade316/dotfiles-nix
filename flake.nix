@@ -45,7 +45,9 @@
     let
       system = "x86_64-linux";
 
-			overlays = [inputs.rust-overlay.overlays.default inputs.rstreamdeck.overlays.default];
+			packages = import ./pkgs {inherit pkgs;};
+
+			overlays = [inputs.rust-overlay.overlays.default inputs.rstreamdeck.overlays.default packages.overlay];
       pkgs = import inputs.nixpkgs {
         inherit system overlays;
 				config.allowUnfree = true;
