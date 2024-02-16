@@ -34,6 +34,7 @@
 
 			#<custom packaged>
 			jupytext-nvim
+			notebooknavigator-nvim
 			#</custom packaged>
 			
 			#to my minor annoyence the plugin for rust that comes with debugging support also does its own lsp stuff. this means I will probably need to do some rethinking in lspconfig.lua
