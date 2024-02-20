@@ -12,12 +12,18 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
+vim.g.rustaceanvim = {
+  server = {
+    capabilities = lsp_zero.get_capabilities()
+  },
+}
 
 lsp_zero.setup_servers({
-	'rust_analyzer',
+	-- 'rust_analyzer',
 	'lua_ls', 
 	'rnix', 
 	'pyright', 
+	'elixirls',
 	'kotlin_language_server',
 	'java_language_server',
 	"gradle_ls",

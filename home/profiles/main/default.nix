@@ -18,6 +18,7 @@
 			../../programs/dev.nix
 			../../programs/syncthing.nix
 			# ../../programs/rstreamdeck.nix
+			../../programs/remote.nix
     ];
 		wayland.windowManager.hyprland.extraConfig = ''
 			#monitor=,preferred,auto,auto

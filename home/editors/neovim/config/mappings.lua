@@ -12,6 +12,12 @@ wk.register({
 		r = {"<cmd> TroubleToggle <cr>", "Trouble"},
 		e = {"<cmd> NvimTreeToggle <cr>", "Filetree"}, 
 		a = {"<cmd> CodeActionMenu <cr>", "Code Actions"},
+
+		g = {
+			name = "Git",
+			c = {"<cmd> Neogit commit <cr>", "Commit"},
+			s = {"<cmd> Neogit kind=split <cr>", "Stage"}
+		}
   },
 })
 

@@ -11,6 +11,7 @@ require("better_escape").setup()
 -- this is causing treesitter query errors for some reason
 -- require("noice").setup()
 require("auto-save").setup()
+require("neogit").setup()
 
 
 
