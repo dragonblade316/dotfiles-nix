@@ -34,6 +34,7 @@ in {
 		bottles
 		etcher
 		rstreamdeck
+		warp-terminal
 
 	];
 }
