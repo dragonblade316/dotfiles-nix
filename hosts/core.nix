@@ -53,21 +53,18 @@
       git
       busybox
       ripgrep
-      #ripgrep-all
 
       gnumake
       gcc
 
       home-manager
       
-      # cudatoolkit #move to envirment
       pamixer
       udiskie
 
       playerctl
 
       wireplumber
-			# xdg-desktop-portal-hyprland
     ];
     
   };

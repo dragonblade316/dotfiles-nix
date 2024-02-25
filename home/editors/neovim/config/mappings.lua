@@ -17,6 +17,12 @@ wk.register({
 			name = "Git",
 			c = {"<cmd> Neogit commit <cr>", "Commit"},
 			s = {"<cmd> Neogit kind=split <cr>", "Stage"}
+		},
+
+		r = {
+			name = "Repl",
+			f = {"<cmd>IronRepl<cr>", "Open Repl"},
+			g = {"<cmd>IronHide<cr>", "Close Repl"},
 		}
   },
 })

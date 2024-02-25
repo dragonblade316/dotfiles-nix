@@ -5,10 +5,13 @@
 	jupytext-nvim = pkgs.callPackage ./jupytext-nvim {};
 	notebooknavigator-nvim = pkgs.callPackage ./notebooknavigator-nvim {};
 
+	warp-terminal = pkgs.callPackage ./warp-terminal {};
+
 	overlay = (final: prev: {
 		vimPlugins = prev.vimPlugins // {
 			jupytext-nvim = jupytext-nvim;
 			notebooknavigator-nvim = notebooknavigator-nvim;
 		};
+		warp-terminal = warp-terminal;
 	});
 }

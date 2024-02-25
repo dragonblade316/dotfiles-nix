@@ -23,6 +23,11 @@
   };
 
   services.xserver.enable = true;    
+  # services.xserver.videoDrivers = ["amdgpu"];
+	systemd.tmpfiles.rules = [
+    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+  ];
+
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.displayManager.defaultSession = "hyprland";
 
@@ -49,10 +54,6 @@
 
 	services.udev.packages = [ pkgs.mixxx ];
 
-  # Tell Xorg to use the nvidia driver
-  services.xserver.videoDrivers = ["amdgpu"];
-
-
 
   programs.hyprland = { # or wayland.windowManager.hyprland
     enable = true;
@@ -67,6 +68,8 @@
 	services.blueman.enable = true;
 
 	services.flatpak.enable = true;
+
+	hardware.opentabletdriver.enable = true;
 
 }
 

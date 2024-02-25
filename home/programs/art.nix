@@ -11,7 +11,7 @@
 #		(blender.override {
  #     cudaSupport = true;
   #  })
-		blender
+		blender-hip
 		freecad
 		godot_4
 		mixxx
