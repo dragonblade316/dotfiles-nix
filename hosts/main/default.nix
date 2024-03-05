@@ -13,6 +13,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+	boot.kernelPackages = pkgs.linuxPackages_6_5;
+
   networking.hostName = "dragonblade316"; # Define your hostname.
 	system.name = "dreadnought";
 	

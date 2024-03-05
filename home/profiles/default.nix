@@ -36,8 +36,11 @@ let
 
 
 in {
-	dragonblade316 = mkHome { conf = ./main; };
-  # "dragonblade316@dreadnought" = mkHome { conf = ./main; };
+	# dragonblade316 = mkHome { conf = ./main; };
+  
+	#this is my main machine
+	"dragonblade316@dragonblade316" = mkHome { conf = ./main; };
+	
+	"dragonblade316@wsl" = mkHome { conf = ./wsl; };
   #"dragonblade316@rog" = mkHome { conf = ./rog; };
-  #"dragonblade316@wsl" = mkHome { conf = ./wsl; };
 }
