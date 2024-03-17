@@ -18,6 +18,14 @@ in {
     ];
   };
 
+	homeserver = nixosSystem {
+		inherit system;
+		modules = [
+			./homeserver
+			./core.nix
+		];
+	};
+
   rog = nixosSystem {
       inherit system;
       modules = [
