@@ -21,7 +21,7 @@
 	# 	password = "password";	
 	#samba for file sharing
 	services.samba.enable = true;
-	services.samba.share = {
+	services.samba.shares = {
 		public = {
 			path = "/var/publicstore";
 			"read only" = false;
