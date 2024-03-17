@@ -40,6 +40,7 @@ in {
   
 	#this is my main machine
 	"dragonblade316@dragonblade316" = mkHome { conf = ./main; };
+	"dragonblade316@thomeserver" = mkHome { conf = ./homeserver; };
 	
 	"dragonblade316@wsl" = mkHome { conf = ./wsl; };
   #"dragonblade316@rog" = mkHome { conf = ./rog; };

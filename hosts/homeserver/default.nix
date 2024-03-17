@@ -14,7 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "THomeServer"; # Define your hostname.
+  networking.hostName = "thomeserver"; # Define your hostname.
 
 	# users.users.public = {
 	# 	#not a security concern bc I dont have port forwarding. screw you Idaho internet (also the user cant do much either way)
