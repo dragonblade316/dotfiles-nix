@@ -22,6 +22,14 @@
 
   networking.hostName = "thomeserver"; # Define your hostname.
 
+	  networking.firewall = {
+  	enable = true;
+  	  allowedTCPPorts = [ 22 ];
+		  allowedUDPPorts = [ 22 ];
+  };
+
+
+
 	# users.users.public = {
 	# 	#not a security concern bc I dont have port forwarding. screw you Idaho internet (also the user cant do much either way)
 	# 	password = "password";	
