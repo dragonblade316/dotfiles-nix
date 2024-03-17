@@ -27,7 +27,7 @@
       cmp-treesitter
 			cmp_luasnip
       cmp-spell
-			cmp-tabnine
+			# cmp-tabnine
       lsp-zero-nvim
 			none-ls-nvim
 			nvim-dap
@@ -59,6 +59,8 @@
 			better-escape-nvim
 			nui-nvim
 			noice-nvim
+			
+			obsidian-nvim
 
       telescope-nvim
       telescope-fzy-native-nvim
@@ -66,8 +68,8 @@
 			neogit
 
       lualine-nvim
-      nvim-web-devicons
-      barbar-nvim
+      nvim-web-devicons 
+			barbar-nvim
     ];
     
 

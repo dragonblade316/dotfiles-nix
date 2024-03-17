@@ -23,9 +23,9 @@
 		wayland.windowManager.hyprland.extraConfig = ''
 			#monitor=,preferred,auto,auto
 			monitor= DP-3, 3840x2160@60, 1920x0, 1.5
-			workspace DP-3,1
+			# workspace 1, monitor: DP-3,
 			monitor= HDMI-A-1, 1920x1080@60, 0x1080, 1
-			workspace=HDMI-A-1,2
+			# workspace=HDMI-A-1,2
 		'';
 
 

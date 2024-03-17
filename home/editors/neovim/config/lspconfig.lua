@@ -25,8 +25,9 @@ lsp_zero.setup_servers({
 	'pyright', 
 	'elixirls',
 	'kotlin_language_server',
-	'java_language_server',
+	'jdtls',
 	"gradle_ls",
 	'cssls',
 	'ccls',
+	'gopls',
 })

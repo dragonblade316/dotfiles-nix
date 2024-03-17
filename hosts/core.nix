@@ -51,7 +51,8 @@
     shell = pkgs.fish;
     packages = with pkgs; [
       git
-      busybox
+      # busybox
+			# uutils-coreutils
       ripgrep
 
       gnumake

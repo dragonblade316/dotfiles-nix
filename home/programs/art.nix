@@ -12,7 +12,10 @@
 #		(blender.override {
  #     cudaSupport = true;
   #  })
+
 		blender-hip
+		natron
+		
 		freecad
 		godot_4
 		mixxx

@@ -1,8 +1,10 @@
 {config, pkgs, ...}: 
 let
 	#wallpaper = ./wallpapers/sans.png;
-	wallpaper = ./wallpapers/cat_bunnies.png;
+	#wallpaper = ./wallpapers/cat_bunnies.png;
+	wallpaper = ./wallpapers/snellys.png;
 
+	nerdfont = "JetBrainsMono Nerd Font";
 
 in {  
 	stylix = {
@@ -18,15 +20,15 @@ in {
 		fonts = {
           serif = {
               package = pkgs.nerdfonts;
-              name = "FiraCode Nerd Font Mono";
+              name = "JetBrainsMono Nerd Font";
           };
           sansSerif = {
               package = pkgs.nerdfonts;
-              name = "FiraCode Nerd Font Mono";
+              name = "JetBrainsMono Nerd Font";
           };
           monospace = {
               package = pkgs.nerdfonts;
-              name = "FiraCode Nerd Font Mono";
+              name = "JetBrainsMono Nerd Font";
           };
           sizes = {
               desktop = 12;
@@ -37,7 +39,8 @@ in {
       };
 	};
 
-	stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+	#stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+	stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-city-dark.yaml";
 
 	stylix.targets.bemenu.enable = false;
 	

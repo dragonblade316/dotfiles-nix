@@ -13,15 +13,15 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-	boot.kernelPackages = pkgs.linuxPackages_6_5;
+	boot.kernelPackages = pkgs.linuxPackages_6_7;
 
   networking.hostName = "dragonblade316"; # Define your hostname.
 	system.name = "dreadnought";
 	
   networking.firewall = {
   	enable = true;
-  	  allowedTCPPorts = [ 53317 631 22000 ];
-		  allowedUDPPorts = [ 53317 631 22000 ];
+  	  allowedTCPPorts = [ 22 53317 631 22000 ];
+		  allowedUDPPorts = [ 22 53317 631 22000 ];
   };
 
   services.xserver.enable = true;    
@@ -34,7 +34,7 @@
   services.xserver.displayManager.defaultSession = "hyprland";
 
 	hardware.bluetooth.enable = true; # enables support for Bluetooth
-   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
 
 	services.printing = {
@@ -72,6 +72,15 @@
 	services.flatpak.enable = true;
 
 	hardware.opentabletdriver.enable = true;
+
+	services.zerotierone = {
+		enable = true;
+		joinNetworks = [
+			"60ee7c034a0e57ba"
+		];
+	};
+
+	services.openssh.enable = true;
 
 }
 

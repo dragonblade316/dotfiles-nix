@@ -13,7 +13,7 @@
 		python3
 		nodePackages_latest.pyright
 
-		java-language-server
+		jdt-language-server
 		kotlin-language-server
 		#nix-index
 	];
