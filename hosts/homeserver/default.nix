@@ -24,8 +24,8 @@
 
 	  networking.firewall = {
   	enable = true;
-  	  allowedTCPPorts = [ 22 9000 ];
-		  allowedUDPPorts = [ 22 9000 ];
+  	  allowedTCPPorts = [ 22 9000 3000];
+		  allowedUDPPorts = [ 22 9000 3000];
   };
 
 
@@ -51,7 +51,7 @@
 	};
 
 	services.zerotierone = {
-		enable = true;
+		enable = false;
 		joinNetworks = [
 			"60ee7c034a0e57ba"
 		];
