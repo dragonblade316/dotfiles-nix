@@ -45,15 +45,16 @@
 		};
 	};
 
-	virtualisation.docker.rootless = {
+	virtualisation.docker = {
 		enable = true;
-		setSocketVariable = true;
 	};
 
 	services.zerotierone = {
 		enable = false;
+		port = 9393;
 		joinNetworks = [
-			"60ee7c034a0e57ba"
+			"f94e28faaa0875b1" #orion network
+			"60ee7c034a0e57ba" #mainnet
 		];
 	};
 
