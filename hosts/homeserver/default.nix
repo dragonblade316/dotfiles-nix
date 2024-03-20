@@ -50,7 +50,7 @@
 	};
 
 	services.zerotierone = {
-		enable = false;
+		enable = true;
 		port = 9393;
 		joinNetworks = [
 			"71ece4c16734cd90" #orion network
