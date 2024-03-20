@@ -21,7 +21,7 @@
   networking.firewall = {
   	enable = true;
   	  allowedTCPPorts = [ 22 53317 631 22000 ];
-		  allowedUDPPorts = [ 22 53317 631 22000 ];
+		  allowedUDPPorts = [ 22 53317 631 22000 9993 ];
   };
 
   services.xserver.enable = true;    
@@ -76,7 +76,8 @@
 	services.zerotierone = {
 		enable = true;
 		joinNetworks = [
-			"60ee7c034a0e57ba"
+			"f94e28faaa0875b1" #orion network
+			"60ee7c034a0e57ba" #mainnet
 		];
 	};
 
