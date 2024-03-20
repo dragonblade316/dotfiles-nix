@@ -76,7 +76,7 @@
 	services.zerotierone = {
 		enable = true;
 		joinNetworks = [
-			"f94e28faaa0875b1" #orion network
+			"71ece4c16734cd90" #orion network
 			"60ee7c034a0e57ba" #mainnet
 		];
 	};
