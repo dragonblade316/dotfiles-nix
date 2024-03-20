@@ -19,7 +19,7 @@ let
   mkHome = {conf}: (
 		hm.lib.homeManagerConfiguration {
 		inherit pkgs;
-		modules = [conf] ++ sharedModules ++ imports;
+		modules = [conf] ++ sharedModules; # ++ imports;
 	});
 
 
