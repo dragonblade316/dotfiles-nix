@@ -2,7 +2,7 @@
   home = {
     username = "dragonblade316";
     homeDirectory = "/home/dragonblade316/";
-    stateVersion = "23.11";
+    stateVersion = "24.05";
   };
 
   nixpkgs.config.allowUnfree = true;
