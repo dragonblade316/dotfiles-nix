@@ -14,7 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "dragonblade316"; # Define your hostname.
+  networking.hostName = "rogserver"; # Define your hostname.
 
 	#just in case I want to use this for cuda stuff
 	hardware.nvidia = {
@@ -50,7 +50,7 @@
 
 	services.openssh.enable = true;
 	virtualisation.docker.enable = true;
-	virtualisation.docker.enableNvidia = true;
+	# virtualisation.docker.enableNvidia = true;
 
 	services.zerotierone = {
 		enable = true;
