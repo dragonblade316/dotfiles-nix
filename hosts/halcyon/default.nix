@@ -14,7 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "rogserver"; # Define your hostname.
+  networking.hostName = "halcyon"; # Define your hostname.
 
 	#just in case I want to use this for cuda stuff
 	hardware.nvidia = {
