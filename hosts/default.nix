@@ -26,6 +26,14 @@ in {
 		];
 	};
 
+	rogserver = nixosSystem {
+		inherit system;
+		modules = [
+			./rogserver
+			./core.nix
+		];
+	};
+
   rog = nixosSystem {
       inherit system;
       modules = [
