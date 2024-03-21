@@ -16,6 +16,9 @@
 
   networking.hostName = "halcyon"; # Define your hostname.
 
+	
+	services.logind.lidSwitchExternalPower = "ignore";
+
 	#just in case I want to use this for cuda stuff
 	hardware.nvidia = {
 
