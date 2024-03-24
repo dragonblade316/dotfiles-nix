@@ -75,6 +75,8 @@
     size = 16*1024;
   } ];
 
+  programs.dconf.enable = true;
+
 	services.udisks2.enable = true;
 	virtualisation.virtualbox.host.enable = true;
 

@@ -5,6 +5,7 @@ let
 	wallpaper = ./wallpapers/snellys.png;
 
 	nerdfont = "JetBrainsMono Nerd Font";
+	home.packages = [ pkgs.dconf ];
 
 in {  
 	stylix = {
@@ -51,10 +52,6 @@ in {
 		name = "kora-grey";
 	};
 	
-	qt = {
-		enable = true;
-		platformTheme = "gtk3";
-	};
 
 	#wallpaper stuff
 	home = {

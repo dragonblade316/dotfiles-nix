@@ -28,4 +28,4 @@ in {
 	"dragonblade316@halcyon" = mkHome { conf = ./halcyon; };
 	"dragonblade316@thomeserver" = mkHome { conf = ./homeserver; };
 	"dragonblade316@wsl" = mkHome { conf = ./wsl; };
-}/var/run/docker.sock
+}
