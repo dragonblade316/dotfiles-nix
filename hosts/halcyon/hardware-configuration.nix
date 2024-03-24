@@ -8,17 +8,12 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-<<<<<<< HEAD
   boot.initrd.availableKernelModules = [ "ohci_pci" "ehci_pci" "sata_nv" "sd_mod" ];
-=======
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usbhid" "usb_storage" "sd_mod" "sdhci_pci" ];
->>>>>>> 0339050e967ba2f8393106bd0495686afb9dcce6
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-<<<<<<< HEAD
     { device = "/dev/disk/by-uuid/a4b1a185-98e7-45f9-b495-e0b034a90d85";
       fsType = "ext4";
     };
@@ -46,15 +41,6 @@
   fileSystems."/var/lib/docker/overlay2/ba9ea840a2338c9b65c96f8659550002e548383855dc8e189b2f27dc99bbeb81/merged" =
     { device = "overlay";
       fsType = "overlay";
-=======
-    { device = "/dev/disk/by-uuid/9e7470d0-7942-48d2-9c51-dfcc76cfb228";
-      fsType = "ext4";
-    };
-
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/D775-4C6C";
-      fsType = "vfat";
->>>>>>> 0339050e967ba2f8393106bd0495686afb9dcce6
     };
 
   swapDevices = [ ];
@@ -64,7 +50,6 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-<<<<<<< HEAD
   # networking.interfaces.br-3c29bcc94c55.useDHCP = lib.mkDefault true;
   # networking.interfaces.br-edbfa00f1078.useDHCP = lib.mkDefault true;
   # networking.interfaces.docker0.useDHCP = lib.mkDefault true;
@@ -77,10 +62,6 @@
   # networking.interfaces.vethe9c813c.useDHCP = lib.mkDefault true;
   # networking.interfaces.ztmoshevhq.useDHCP = lib.mkDefault true;
   # networking.interfaces.ztwcf5adhx.useDHCP = lib.mkDefault true;
-=======
-  # networking.interfaces.enp3s0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp4s0.useDHCP = lib.mkDefault true;
->>>>>>> 0339050e967ba2f8393106bd0495686afb9dcce6
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
