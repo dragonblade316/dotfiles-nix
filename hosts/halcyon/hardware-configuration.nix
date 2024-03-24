@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "ohci_pci" "ehci_pci" "sata_nv" "usbhid" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "ohci_pci" "ehci_pci" "sata_nv" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
@@ -18,6 +18,31 @@
       fsType = "ext4";
     };
 
+  fileSystems."/var/lib/docker/overlay2/d1266896eabbc89e5ab25711d8b9b94e545f478ce3b29199d20fedf1bcbb4810/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/9e0d0d02c3d8fec9b58188ace1cf017a2738c94602482e019223d5c0c1bc027c/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/dd09af06ea46196f5c678b821a8734e2d4c74f378fb3802c0fe29d0880482910/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/e0e56ef441d06e3d4463795137e74767603a40009ad42b7918554d9002086e13/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/ba9ea840a2338c9b65c96f8659550002e548383855dc8e189b2f27dc99bbeb81/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -25,7 +50,18 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.br-3c29bcc94c55.useDHCP = lib.mkDefault true;
+  # networking.interfaces.br-edbfa00f1078.useDHCP = lib.mkDefault true;
+  # networking.interfaces.docker0.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp0s7.useDHCP = lib.mkDefault true;
+  # networking.interfaces.vboxnet0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth00db264.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth1839135.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth6a13ee8.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth88fec57.useDHCP = lib.mkDefault true;
+  # networking.interfaces.vethe9c813c.useDHCP = lib.mkDefault true;
+  # networking.interfaces.ztmoshevhq.useDHCP = lib.mkDefault true;
+  # networking.interfaces.ztwcf5adhx.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
