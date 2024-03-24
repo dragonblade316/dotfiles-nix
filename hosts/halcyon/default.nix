@@ -61,6 +61,15 @@
 	virtualisation.docker.enable = true;
 	# virtualisation.docker.enableNvidia = true;
 
+  environment.systemPackages = [
+    pkgs.jdk8
+  ];
+	
+	virtualisation.virtualbox.host.enable = true;
+	virtualisation.virtualbox.host.headless = true;
+	virtualisation.virtualbox.host.enableExtensionPack = true;
+	virtualisation.virtualbox.host.enableWebService = true;
+
 	services.zerotierone = {
 		enable = true;
 		joinNetworks = [
