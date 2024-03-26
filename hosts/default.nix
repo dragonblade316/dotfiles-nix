@@ -21,7 +21,7 @@ in {
 	homeserver = nixosSystem {
 		inherit system;
 		modules = [
-			./halcyon
+			./homeserver
 			./core.nix
 		];
 	};
@@ -29,7 +29,7 @@ in {
 	halcyon = nixosSystem {
 		inherit system;
 		modules = [
-			./rogserver
+			./halcyon
 			./core.nix
 		];
 	};
