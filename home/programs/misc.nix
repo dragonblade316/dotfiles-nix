@@ -35,6 +35,7 @@ in {
 		etcher
 		rstreamdeck
 		warp-terminal
-
+		xfce.thunar
+		samba
 	];
 }

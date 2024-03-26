@@ -38,10 +38,17 @@
 	services.samba.shares = {
 		public = {
 			path = "/var/publicstore";
-			"read only" = false;
+			"read only" = true;
 			browseable = "yes";
 			"guest ok" = "yes";
-			comment = "housewide file sharing";
+			comment = "networkwide file sharing";
+		};
+		public_edit = {
+			path = "/var/publicstore";
+			"read only" = false;
+			browseable = "yes";
+			"guest ok" = "no";
+			comment = "editing the networkwide file sharing";
 		};
 	};
 

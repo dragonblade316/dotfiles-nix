@@ -67,7 +67,8 @@
 				"SUPER, R, exec, fuzzel"
 				#need a toggle split keybind
 				"SUPER, G, togglesplit"
-				"SUPER, S, exec, grim -g $(slurp)"
+				"SUPER, S, exec, grim -g $(slurp) $HOME/Pictures/Screenshots/$(date +'%s_grim.png')
+"
 
 				"SUPERALT, j, exec, makoctl dismiss" 
 				"SUPERALT, k, exec, makoctl restore"
