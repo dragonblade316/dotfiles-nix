@@ -18,6 +18,16 @@ in {
     ];
   };
 
+	framework = nixosSystem {
+		inherit system;
+		modules = [
+			./framework
+			./modules/desktop.nix
+			./core.nix
+		];
+	};
+
+
 	homeserver = nixosSystem {
 		inherit system;
 		modules = [
