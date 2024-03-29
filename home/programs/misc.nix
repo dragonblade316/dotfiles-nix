@@ -34,7 +34,7 @@ in {
 		bottles
 		etcher
 		rstreamdeck
-		warp-terminal
+		# warp-terminal
 		xfce.thunar
 		samba
 	];
