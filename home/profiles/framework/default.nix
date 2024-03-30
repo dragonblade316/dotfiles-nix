@@ -4,7 +4,6 @@
       ../../programs/misc.nix
       ../../themeing.nix
       ../../wayland/hypr
-		  # ../../programs/eww
 			../../wayland/waybar.nix
 			../../terminals/kitty.nix
 			../../programs/mako.nix
@@ -17,8 +16,13 @@
 			../../programs/fuzzel.nix
 			../../programs/dev.nix
 			../../programs/syncthing.nix
-			# ../../programs/rstreamdeck.nix
 			../../programs/remote.nix
     ];
+
+		#ignore the weird scaling factor
+		wayland.windowManager.hyprland.extraConfig = ''
+			monitor= eDP-1, 2256x1504@60, 0x0, 1.566667
+		'';
+
 	
 }
