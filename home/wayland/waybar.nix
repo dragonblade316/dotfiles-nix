@@ -1,19 +1,20 @@
-{config, ...}: {
+{config, pkgs, ...}: {
 	programs.waybar = {
 		enable = true;
 		settings = {
 			mainBar = {
 				layer = "top";
 				position = "top";
-
+				
 				modules-left = ["mpris" "wireplumber"];
-				modules-center = ["hyprland/workspaces" "hyprland/window"];
+				modules-center = ["hyprland/workspaces"];
 				modules-right = ["battery" "cpu" "temperature" "memory" "network" "tray" "clock"];
+
 
 
 				"mpris" = {
 					format = ''{player_icon} {dynamic}'';
-					format-paused = ''DEFAULT: {status_icon} <i>{dynamic}</i>'';
+					format-paused = ''{status_icon} <i>{dynamic}</i>'';
 					player-icons = {
 						default = "▶";
             mpv = "🎵";
@@ -21,7 +22,7 @@
 					status-icons = {
 						paused = "⏸";
 					};
-					max-length = 50;
+					max-length = 40;
 				};
 
 				"wireplumber" = {
@@ -35,19 +36,25 @@
 				};
 
 				"cpu" = {
-					interval = 1;
-					format = ''{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}'';
-					format-icons = [
-						''<span color='#69ff94'>▁</span>'' # green
-          	''<span color='#2aa9ff'>▂</span>'' # blue
-          	''<span color='#f8f8f2'>▃</span>'' # white
-          	''<span color='#f8f8f2'>▄</span>'' # white
-          	''<span color='#ffffa5'>▅</span>'' # yellow
-          	''<span color='#ffffa5'>▆</span>'' # yellow
-          	''<span color='#ff9977'>▇</span>'' # orange
-          	''<span color='#dd532e'>█</span>''
-					];
+    			interval = 10;
+    			format = "{}% ";
+    			max-length = 10;
 				};
+
+				# "cpu" = {
+				# 	interval = 1;
+				# 	format = ''{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}'';
+				# 	format-icons = [
+				# 		''<span color='#69ff94'>▁</span>'' # green
+    #       	''<span color='#2aa9ff'>▂</span>'' # blue
+    #       	''<span color='#f8f8f2'>▃</span>'' # white
+    #       	''<span color='#f8f8f2'>▄</span>'' # white
+    #       	''<span color='#ffffa5'>▅</span>'' # yellow
+    #       	''<span color='#ffffa5'>▆</span>'' # yellow
+    #       	''<span color='#ff9977'>▇</span>'' # orange
+    #       	''<span color='#dd532e'>█</span>''
+				# 	];
+				# };
 
 				"memory" = {
 					interval = 30;

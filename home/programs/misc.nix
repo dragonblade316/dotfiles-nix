@@ -32,7 +32,7 @@ in {
 		localsend
 		xwaylandvideobridge
 		bottles
-		etcher
+		# etcher
 		rstreamdeck
 		# warp-terminal
 		xfce.thunar

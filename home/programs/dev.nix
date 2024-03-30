@@ -7,7 +7,6 @@
 		ccls
 		libclang
 
-		rnix-lsp
 		nixos-shell
 		
 		python3
