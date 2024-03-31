@@ -62,7 +62,7 @@
 	# virtualisation.docker.enableNvidia = true;
 
   environment.systemPackages = [
-    pkgs.jdk8
+  	pkgs.openjdk8-bootstrap
   ];
 	
 	virtualisation.virtualbox.host.enable = true;
