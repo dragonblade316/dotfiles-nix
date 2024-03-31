@@ -8,7 +8,7 @@
 				
 				modules-left = ["mpris" "wireplumber"];
 				modules-center = ["hyprland/workspaces"];
-				modules-right = ["battery" "cpu" "temperature" "memory" "network" "tray" "clock"];
+				modules-right = ["battery" "cpu" "memory" "network" "tray" "clock"];
 
 
 
