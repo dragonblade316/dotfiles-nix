@@ -37,23 +37,6 @@
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
 
-	services.printing = {
-  	  listenAddresses = [ "*:631" ];
-  	  allowFrom = [ "all" ];
-			openFirewall = true;
-  	  browsing = true;
-  	  defaultShared = true;
-	};
-
-	services.avahi = {
-      enable = true;
-      nssmdns4 = true;
-      openFirewall = true;
-      publish = {
-    	enable = true;
-    	userServices = true;
-  	  };
-	};
 
 	services.udev.packages = [ pkgs.mixxx ];
 
