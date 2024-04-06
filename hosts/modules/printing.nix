@@ -1,6 +1,7 @@
 {	
 	services.printing = {
 			enable = true;
+			openFirewall = true;
   	  listenAddresses = [ "*:631" ];
   	  allowFrom = [ "all" ];
   	  browsing = true;
@@ -9,7 +10,7 @@
 
 	services.avahi = {
       enable = true;
-      nssmdns = true;
+      nssmdns4 = true;
       openFirewall = true;
       publish = {
     	enable = true;
