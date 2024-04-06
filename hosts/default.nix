@@ -15,6 +15,7 @@ in {
       ./main
       ./modules/desktop.nix
 			./modules/polkit.nix
+			./modules/printing.nix
       ./core.nix
     ];
   };
@@ -24,6 +25,8 @@ in {
 		modules = [
 			./framework
 			./modules/desktop.nix
+			./modules/polkit.nix
+			./modules/printing.nix
 			./core.nix
 		];
 	};
