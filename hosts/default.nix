@@ -14,6 +14,7 @@ in {
     modules = [
       ./main
       ./modules/desktop.nix
+			./modules/polkit.nix
       ./core.nix
     ];
   };
@@ -44,15 +45,6 @@ in {
 		];
 	};
 
-  rog = nixosSystem {
-      inherit system;
-      modules = [
-       ./main
-       ./modules/desktop.nix
-       ./core.nix
-      ];
-    };
-  
   wsl = nixosSystem {
     inherit system;
     modules = [

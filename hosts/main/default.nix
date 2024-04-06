@@ -63,7 +63,6 @@
   };
 
 	#trying to get gparted to work
-	security.polkit.enable = true;
 	services.gvfs.enable = true;
 	programs.thunar.enable = true;
 
