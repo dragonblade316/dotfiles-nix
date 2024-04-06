@@ -20,8 +20,8 @@
 	
   networking.firewall = {
   	enable = true;
-  	  allowedTCPPorts = [ 22 53317 631 22000 ];
-		  allowedUDPPorts = [ 22 53317 631 22000 9993 ];
+  	  allowedTCPPorts = [ 22 53317 22000 ];
+		  allowedUDPPorts = [ 22 53317 22000 9993 ];
   };
 
   services.xserver.enable = true;    
@@ -40,13 +40,14 @@
 	services.printing = {
   	  listenAddresses = [ "*:631" ];
   	  allowFrom = [ "all" ];
+			openFirewall = true;
   	  browsing = true;
   	  defaultShared = true;
 	};
 
 	services.avahi = {
       enable = true;
-      nssmdns = true;
+      nssmdns4 = true;
       openFirewall = true;
       publish = {
     	enable = true;
