@@ -19,7 +19,7 @@
 	networking.firewall = {
   	enable = true;
   	  allowedTCPPorts = [ 22 9000 9001 3000];
-		  allowedUDPPorts = [ 22 9000 3000];
+		  allowedUDPPorts = [ 22 9000 3000 9993];
   };
 
 	
@@ -67,8 +67,8 @@
 	
 	virtualisation.virtualbox.host.enable = true;
 	virtualisation.virtualbox.host.headless = true;
-	virtualisation.virtualbox.host.enableExtensionPack = true;
-	virtualisation.virtualbox.host.enableWebService = true;
+	# virtualisation.virtualbox.host.enableExtensionPack = true;
+	# virtualisation.virtualbox.host.enableWebService = true;
 
 	services.zerotierone = {
 		enable = true;
