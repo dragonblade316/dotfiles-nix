@@ -33,12 +33,12 @@
 			nvim-dap
 
 			
-			jupytext-nvim
-			notebooknavigator-nvim
-			iron-nvim
-			mini-nvim
-			hydra-nvim
-			
+			# jupytext-nvim
+			# notebooknavigator-nvim
+			# iron-nvim
+			# mini-nvim
+			# hydra-nvim
+		
 			rustaceanvim
 			#to my minor annoyence the plugin for rust that comes with debugging support also does its own lsp stuff. this means I will probably need to do some rethinking in lspconfig.lua
 			# rust-tools-nvim

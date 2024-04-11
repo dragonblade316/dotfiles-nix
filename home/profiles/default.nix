@@ -25,6 +25,7 @@ let
 
 in {
 	"dragonblade316@dragonblade316" = mkHome { conf = ./main; };
+	"dragonblade316@framework" = mkHome { conf = ./framework; };
 	"dragonblade316@halcyon" = mkHome { conf = ./halcyon; };
 	"dragonblade316@thomeserver" = mkHome { conf = ./homeserver; };
 	"dragonblade316@wsl" = mkHome { conf = ./wsl; };

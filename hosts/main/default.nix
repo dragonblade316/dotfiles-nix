@@ -20,8 +20,8 @@
 	
   networking.firewall = {
   	enable = true;
-  	  allowedTCPPorts = [ 22 53317 631 22000 ];
-		  allowedUDPPorts = [ 22 53317 631 22000 9993 ];
+  	  allowedTCPPorts = [ 22 53317 22000 ];
+		  allowedUDPPorts = [ 22 53317 22000 9993 ];
   };
 
   services.xserver.enable = true;    
@@ -37,22 +37,6 @@
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
 
-	services.printing = {
-  	  listenAddresses = [ "*:631" ];
-  	  allowFrom = [ "all" ];
-  	  browsing = true;
-  	  defaultShared = true;
-	};
-
-	services.avahi = {
-      enable = true;
-      nssmdns = true;
-      openFirewall = true;
-      publish = {
-    	enable = true;
-    	userServices = true;
-  	  };
-	};
 
 	services.udev.packages = [ pkgs.mixxx ];
 
@@ -63,7 +47,6 @@
   };
 
 	#trying to get gparted to work
-	security.polkit.enable = true;
 	services.gvfs.enable = true;
 	programs.thunar.enable = true;
 

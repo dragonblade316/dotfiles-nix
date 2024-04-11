@@ -32,9 +32,9 @@ in {
 		localsend
 		xwaylandvideobridge
 		bottles
-		etcher
+		# etcher
 		rstreamdeck
-		warp-terminal
+		# warp-terminal
 		xfce.thunar
 		samba
 	];
