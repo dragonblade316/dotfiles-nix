@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   #imports = [./config.nix];
   wayland.windowManager.hyprland = {
 		enable = true;
@@ -61,14 +61,13 @@
 				"SUPER, C, killactive"
 				"SUPER, M, exec, swaylock"
 				"SUPERSHIFTALT, M, exit"
-				"SUPER, E, exec, nautilus"
+				"SUPER, E, exec, thunar"
 				"SUPER, F, togglefloating"
 				"SUPERALT, F, fullscreen"
 				"SUPER, R, exec, fuzzel"
 				#need a toggle split keybind
 				"SUPER, G, togglesplit"
-				"SUPER, S, exec, grim -g $(slurp) $HOME/Pictures/Screenshots/$(date +'%s_grim.png')
-"
+				"SUPER, S, exec, grim -g $(slurp) - | swappy -f - | wl-copy "
 
 				"SUPERALT, j, exec, makoctl dismiss" 
 				"SUPERALT, k, exec, makoctl restore"
@@ -138,5 +137,13 @@
 		# 	inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
 		# ];
 	};
+
+
+	home.packages = with pkgs; [
+		grim
+		slurp
+		wl-clipboard
+		swappy
+	];
 
 }

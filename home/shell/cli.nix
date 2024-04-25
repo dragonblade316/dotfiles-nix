@@ -4,9 +4,6 @@
     unzip
     unrar
 
-    grim
-    slurp
-
 		btop
 
     ripgrep
