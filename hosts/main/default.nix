@@ -58,6 +58,11 @@
 
 	hardware.opentabletdriver.enable = true;
 
+	programs.alvr = {
+		enable = true;
+		openFirewall = true;
+	};
+
 	services.zerotierone = {
 		enable = true;
 		joinNetworks = [

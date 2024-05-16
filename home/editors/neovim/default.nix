@@ -27,7 +27,7 @@
       cmp-treesitter
 			cmp_luasnip
       cmp-spell
-			# cmp-tabnine
+			cmp-tabnine
       lsp-zero-nvim
 			none-ls-nvim
 			nvim-dap

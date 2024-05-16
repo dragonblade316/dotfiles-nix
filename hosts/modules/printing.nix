@@ -13,8 +13,8 @@
       nssmdns4 = true;
       openFirewall = true;
       publish = {
-    	enable = true;
-    	userServices = true;
+	    	enable = true;
+  	  	userServices = true;
   	  };
 	};
 
