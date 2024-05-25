@@ -10,7 +10,7 @@ cmp.setup(
   {
     sources = {
       {name = 'nvim_lsp'},
-			{name = 'cmp-tabnine'},
+			{name = 'cmp_tabnine'},
       {name = 'spell'},
       {name = 'buffer'},
 			{name = 'treesitter'},
@@ -24,9 +24,24 @@ cmp.setup(
     -- Ctrl+Space to trigger completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
 
+    ['<C-j>'] = cmp.mapping(function() 
+			if cmp.visable then
+				cmp.select_next_item()
+			end
+    end),
+    ['<C-k>'] = cmp.mapping(function() 
+			if cmp.visable then
+				cmp.select_prev_item()
+			end
+    end),
+ 
+    
+
+    
+    
     -- Navigate between snippet placeholder
-    --['<C-f>'] = cmp_action.luasnip_jump_forward(),
-    --['<C-b>'] = cmp_action.luasnip_jump_backward(),
+    -- ['<C-j>'] = cmp_action.luasnip_jump_forward(),
+    -- ['<C-k>'] = cmp_action.luasnip_jump_backward(),
 
     -- Scroll up and down in the completion documentation
     ['<C-j>'] = cmp.mapping.scroll_docs(-4),

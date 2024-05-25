@@ -31,6 +31,7 @@
       lsp-zero-nvim
 			none-ls-nvim
 			nvim-dap
+			
 
 			
 			# jupytext-nvim

@@ -1,11 +1,22 @@
-{config, pkgs, ...}: 
+{config, pkgs, lib, ...}: 
 let
 	#wallpaper = ./wallpapers/sans.png;
 	#wallpaper = ./wallpapers/cat_bunnies.png;
 	wallpaper = ./wallpapers/snellys.png;
+	animatedwallpaper = ./wallpapers/sans.png;
 
 	nerdfont = "JetBrainsMono Nerd Font";
 	home.packages = [ pkgs.dconf ];
+
+	options.theming.useTilingWallPaper = lib.mkOption {
+    type = lib.types.bool;  # Set the data type (e.g., bool, string)
+    default = true;     # Define a default value (optional)
+  };
+	
+	options.theming.animateTilingWallPaper = lib.mkOption {
+    type = lib.types.bool;  # Set the data type (e.g., bool, string)
+    default = true;     # Define a default value (optional)
+  };
 
 in {  
 	stylix = {
@@ -64,7 +75,37 @@ in {
 		
 		packages = with pkgs; [
 			hyprpaper
+			swww
 		];
-
 	};
+
+		
+		systemd = {
+			user.startServices = "sd-switch";
+
+			user.services.swww-daemon = {
+  			Unit = {
+					description = "My Startup Script";
+				};
+  			Service.Type = "simple"; 
+  			Service.ExecStart = ''${pkgs.swww}/bin/swww-daemon'';
+  			
+				Install.WantedBy = [ "default.target" ];  # Starts after login
+			};
+
+  		user.services.swww-picker = {
+    		Unit = {
+					description = "swww wallpaper picker";
+				};
+				Install = {
+					WantedBy = [ "swww-daemon.target" ];
+    			After = [ "swww-daemon.target" ];
+    			# After = [ "swww-daemon.target" ];
+				};
+				Service = {
+      	  Type = "oneshot";
+        	ExecStart = "${pkgs.swww}/bin/swww img ${animatedwallpaper}";
+				};
+  		};
+		};
 }
