@@ -4,8 +4,7 @@ let
 	#wallpaper = ./wallpapers/cat_bunnies.png;
 	wallpaper = ./wallpapers/snellys.png;
 	#the animated gif version has to be seperate because stylix cannot handle gifs
-	animatedwallpaper = ./wallpapers/chill_with_gengar_and_mimikyu_loop.gif
-;
+	animatedwallpaper = ./wallpapers/chill_with_gengar_and_mimikyu_loop.gif;
 
 	nerdfont = "JetBrainsMono Nerd Font";
 	home.packages = [ pkgs.dconf ];
@@ -88,20 +87,22 @@ in {
 		user.services.swww-daemon = {
   		Unit = {
 				description = "My Startup Script";
+				Wants = "swww-picker.service";
 			};
   		Service.Type = "simple"; 
   		Service.ExecStart = ''${pkgs.swww}/bin/swww-daemon'';
   		
-			Install.WantedBy = [ "default.target" ];  # Starts after login
+			Install.WantedBy = [ "graphical-session.target" ];  # Starts after login
 		};
 
   	user.services.swww-picker = {
     	Unit = {
 				description = "swww wallpaper picker";
+				#the way it works right now will not restart automatically after a homerebuild.
+    		After = [ "swww-daemon.service" ];
 			};
 			Install = {
-				WantedBy = [ "default.target" ];
-    		After = [ "swww-daemon.target" ];
+				# WantedBy = [ "swww-daemon.service" ];
 			};
 			Service = {
     	  Type = "oneshot";
