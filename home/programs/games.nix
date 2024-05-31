@@ -9,5 +9,8 @@
 		xonotic
 		grapejuice
 		prismlauncher
+
+		sidequest
+		alvr
 	];
 }

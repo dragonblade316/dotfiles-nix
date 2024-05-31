@@ -7,7 +7,7 @@
 			exec-once = [
 				"waybar" 
 				"udiskie &"
-				"hyprpaper"
+				# "hyprpaper"
 				"xwaylandvideobridge"
 				"blueman-applet"
 				"Rstreamdeck"
@@ -25,8 +25,6 @@
     		#col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
     		#col.inactive_border = rgba(595959aa)
 			};
-
-
 
 			decoration = {
 				rounding = 10;
@@ -67,8 +65,7 @@
 				"SUPER, R, exec, fuzzel"
 				#need a toggle split keybind
 				"SUPER, G, togglesplit"
-				"SUPER, S, exec, grim -g $(slurp) - | swappy -f - | wl-copy "
-
+				"SUPER, S, exec, grim -g $(slurp) - | swappy -f -"
 				"SUPERALT, j, exec, makoctl dismiss" 
 				"SUPERALT, k, exec, makoctl restore"
 

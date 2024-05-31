@@ -28,7 +28,8 @@ lsp_zero.setup_servers({
 	'jdtls',
 	"gradle_ls",
 	'cssls',
+	'crystalline',
 	'clangd',
-	'ccls',
+	--'ccls',
 	'gopls',
 })
