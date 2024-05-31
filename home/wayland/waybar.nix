@@ -94,7 +94,6 @@
 
 
 		
-		#TODO rewrite this to take advantage of nix colors
 		style = ''
 		 	* {
      			font-family: "FiraMono Nerd Font";

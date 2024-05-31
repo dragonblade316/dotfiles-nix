@@ -19,7 +19,7 @@ vim.g.rustaceanvim = {
 }
 
 lsp_zero.setup_servers({
-	-- 'rust_analyzer',
+	'rust_analyzer',
 	'lua_ls', 
 	'rnix', 
 	'pyright', 
@@ -28,7 +28,7 @@ lsp_zero.setup_servers({
 	'jdtls',
 	"gradle_ls",
 	'cssls',
-	-- 'clangd',
+	'clangd',
 	'ccls',
 	'gopls',
 })
