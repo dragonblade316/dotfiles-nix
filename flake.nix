@@ -2,7 +2,6 @@
   description = "dragonblade316's configuration files";
 
   inputs = {
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     
     # Home manager
@@ -18,6 +17,12 @@
 			url = "github:danth/stylix";
 		};
 
+		nixvim = {
+        url = "github:nix-community/nixvim";
+        # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
 		rstreamdeck = {
 			url = "github:dragonblade316/rstreamdeck";
 		};
@@ -28,7 +33,7 @@
     	url = "github:hyprwm/hyprland-plugins";
 
 			#ima regret removing this later.
-			#inputs.hyprland.follows = "hyprland"; 
+			# inputs.hyprland.follows = ""; 
   	};
 
 		nixos-wsl = {

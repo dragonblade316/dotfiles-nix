@@ -11,8 +11,9 @@ let
   sharedModules = [
     ../.
 		../shell
-    ../editors/neovim
+    ../editors/nixvim
 		inputs.stylix.homeManagerModules.stylix
+		inputs.nixvim.homeManagerModules.nixvim
 		inputs.nix-index-database.hmModules.nix-index
 	];
 
