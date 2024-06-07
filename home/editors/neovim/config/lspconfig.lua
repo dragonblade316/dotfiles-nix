@@ -19,7 +19,7 @@ vim.g.rustaceanvim = {
 }
 
 lsp_zero.setup_servers({
-	-- 'rust_analyzer',
+	'rust_analyzer',
 	'lua_ls', 
 	'rnix', 
 	'pyright', 
