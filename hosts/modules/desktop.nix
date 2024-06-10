@@ -2,6 +2,8 @@
     #this file will be included by any configuration with sound and monitor
 		services.xserver.enable = true;    
 
+		xdg.portal.enable = true;
+
 
     hardware.opengl = {
 			enable = true;
