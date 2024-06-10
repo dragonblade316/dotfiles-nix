@@ -16,7 +16,7 @@
 	
 	boot.kernelPackages = pkgs.linuxPackages_latest;
 
-networking.hostName = "halcyon"; # Define your hostname.
+	networking.hostName = "halcyon"; # Define your hostname.
 
 	networking.firewall = {
   	enable = true;
