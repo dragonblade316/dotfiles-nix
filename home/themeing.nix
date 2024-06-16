@@ -89,8 +89,13 @@ in {
 				description = "My Startup Script";
 				Wants = "swww-picker.service";
 			};
-  		Service.Type = "simple"; 
-  		Service.ExecStart = ''${pkgs.swww}/bin/swww-daemon'';
+  		Service = {
+				Type = "simple"; 
+  			ExecStart = ''${pkgs.swww}/bin/swww-daemon'';
+
+				Restarts = "always";
+				StartLimitInterval = 15;
+			};
   		
 			Install.WantedBy = [ "graphical-session.target" ];  # Starts after login
 		};

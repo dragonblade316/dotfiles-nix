@@ -13,7 +13,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-	boot.kernelPackages = pkgs.linuxPackages_6_7;
+	# boot.kernelPackages = pkgs.linuxPackages_6_7;
 
   networking.hostName = "framework"; # Define your hostname.
 	
@@ -46,7 +46,6 @@
   };
 
 	#trying to get gparted to work
-	security.polkit.enable = true;
 	services.gvfs.enable = true;
 	programs.thunar.enable = true;
 
