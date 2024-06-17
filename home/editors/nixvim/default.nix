@@ -34,6 +34,11 @@
       	enable = true;
     	};
 
+			flash = {
+				enable = true;
+				pattern = "s";
+			};
+
 			trouble = {
       	enable = true;
     	};
