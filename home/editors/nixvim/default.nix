@@ -1,6 +1,10 @@
 {
 	imports = [
+		./main.nix
+		./cmp.nix
+		./styling.nix
 		./keymaps.nix
+		./dap.nix
 	];
 
 	programs.nixvim = {
@@ -8,7 +12,6 @@
 
 		globalOpts = {
 			number = true;
-			# reletivenumber = false;
 
 			tabstop = 2;
 			shiftwidth = 2;
@@ -16,45 +19,14 @@
 			# softtabstop = 0;
     			# expandtab = true;
     			# smarttab = true;
-    			#
+  			#
 			clipboard = "unnamedplus";
 		};
 
 		plugins = {
-			#needed stuff
-			better-escape = {
-				enable = true;
-			};
-
-			nvim-autopairs = {
-      	enable = true;
-    	};
-
-			treesitter = {
-      	enable = true;
-    	};
-
-			flash = {
-				enable = true;
-				pattern = "s";
-			};
-
 			trouble = {
       	enable = true;
     	};
-
-			#looks	
-			oil = {
-				enable = true;
-			};
-
-			lualine = {
-				enable = true;
-			};
-			
-			noice = {
-				enable = true;
-			};
 
 			# #tree
 			nvim-tree = {
@@ -104,7 +76,5 @@
 			};
 			
 		};
-
-		
 	};
 }

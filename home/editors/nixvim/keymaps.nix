@@ -1,4 +1,6 @@
 {
+	programs.nixvim.extraConfigLuaPre = ''vim.g.mapleader = " "'';
+	
 	programs.nixvim.keymaps = [
 		{
 			action = "<cmd>NvimTreeToggle<cr>";
@@ -18,6 +20,11 @@
 		{
 			action = "<cmd>Telescope find_files<cr>";
 			key = "<leader>f";
+		}
+
+		{
+			action = "<cmd>lua require('dap').continue() <cr>";
+			key = "<leader>l";
 		}
 		
 	];
