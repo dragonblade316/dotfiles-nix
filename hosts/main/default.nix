@@ -17,6 +17,8 @@
 
   networking.hostName = "dragonblade316"; # Define your hostname.
 	system.name = "dreadnought";
+
+	services.xserver.videoDrivers = [ "amdgpu" ];
 	
   networking.firewall = {
   	enable = true;
