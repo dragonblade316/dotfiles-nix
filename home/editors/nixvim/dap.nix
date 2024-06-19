@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
 	programs.nixvim.plugins.dap = {
 		enable = true;
 			signs = {
@@ -50,6 +50,14 @@
 						port = 1234;
 					}
 				];
+			};
+
+			adapters = {
+				executables = {
+					gdb = {
+						command = "${pkgs}.vscode-extensions.ms-vscode.cpptools/extentions/debugAdapters/bin/OpenDebugAD7";
+					};
+				};
 			};
 		};
 }

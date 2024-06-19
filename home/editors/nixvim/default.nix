@@ -24,6 +24,10 @@
 		};
 
 		plugins = {
+			dashboard = {
+				enable = true;
+			};
+
 			trouble = {
       	enable = true;
     	};
@@ -33,7 +37,6 @@
 				enable = true;
 			};
 
-			#
 
 			lsp = {
 				enable = true;
