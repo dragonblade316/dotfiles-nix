@@ -8,7 +8,7 @@
 		}
 		
 		{
-			action = "<cmd>TroubelToggle<cr>";
+			action = "<cmd>TroubleToggle<cr>";
 			key = "<leader>r";
 		}
 
