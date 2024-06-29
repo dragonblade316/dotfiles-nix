@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
 	programs.nixvim.plugins.dap = {
 		enable = true;
 			signs = {
@@ -45,11 +45,25 @@
 					{
 						type = "gdb";
 						request = "launch";
-						name = "Debug (Attach) - Remote";
+						name = "qemu";
+						MIMode = "gdb";
+    				miDebuggerServerAddress = "localhost:1234";
+    				miDebuggerPath = "${pkgs.gdb}/bin/gdb";
 						hostName = "127.0.0.1";
 						port = 1234;
 					}
 				];
+			};
+
+			adapters = {
+				executables = {
+					# lldb = {
+					# 	command = "${pkgs.lldb_18}/bin/lldb-vscode";
+					# };
+					gdb = {
+						command = "${pkgs.vscode-extensions.ms-vscode.cpptools}/share/vscode/extensions/ms-vscode.cpptools/debugAdapters/bin/OpenDebugAD7";
+					};
+				};
 			};
 		};
 }
