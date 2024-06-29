@@ -39,8 +39,13 @@
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
 
+	hardware.keyboard.qmk.enable = true;
 
-	services.udev.packages = [ pkgs.mixxx ];
+	environment.systemPackages = [ pkgs.via ];
+	services.udev.packages = [ 
+		pkgs.mixxx 
+		pkgs.via 
+	];
 
 
   programs.hyprland = { # or wayland.windowManager.hyprland
@@ -74,6 +79,5 @@
 	};
 
 	services.openssh.enable = true;
-
 }
 
