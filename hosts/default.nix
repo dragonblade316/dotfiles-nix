@@ -47,6 +47,7 @@ in {
 		modules = [
 			./halcyon
 			./core.nix
+			inputs.nixos-hardware.nixosModules.asus-zephyrus-ga503
 		];
 	};
 
